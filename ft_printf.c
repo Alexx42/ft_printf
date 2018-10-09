@@ -39,7 +39,7 @@ int		ft_printf(const char *fmt, ...)
 			fmt++;
 			parse_everything(&flags, &fmt);
 			append(&lst, buf, i);
-			arr = ft_strdup(choose_conversion(flags, fmt, args));
+			arr = choose_conversion(flags, fmt, args);
 			flags->len = (int)ft_strlen(arr);
 			flags->len_total = handle_flags(&lst, flags, args2);
 			handle_flags2(&lst, flags, &arr, fmt);
