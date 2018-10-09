@@ -6,7 +6,7 @@
 #    By: ale-goff <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/06 21:23:25 by ale-goff          #+#    #+#              #
-#    Updated: 2018/10/06 21:34:57 by ale-goff         ###   ########.fr        #
+#    Updated: 2018/10/09 12:54:42 by ale-goff         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRC = basic_lists.c\
 	  validate_fun.c\
 	  wap.c
 
-OBJ = $(SRCS=*.c=*.o)
+OBJ = $(SRC:.c=.o)
 
 LIB = libftprintf.a
 
