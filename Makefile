@@ -21,21 +21,21 @@ SRC = basic_lists.c\
 
 OBJ = $(SRC:.c=.o)
 
-LIB = libftprintf.a
+NAME = libftprintf.a
 
 FLAGS = -Wall -Werror -Wextra
 
-all: $(LIB)
+all: $(NAME)
 
-$(LIB): 
+$(NAME): 
 	gcc -c $(FLAGS) $(SRC)
-	ar rc $(LIB) $(OBJ)
-	ranlib $(LIB)
+	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 clean:
 	/bin/rm -f $(OBJ)
 
 fclean: clean
-	/bin/rm -f $(LIB)
+	/bin/rm -f $(NAME)
 
 re: fclean all
