@@ -12,28 +12,28 @@
 
 #include "ft_printf.h"
 
-int		validate_flags(char c)
+int			validate_flags(char c)
 {
 	if (c == '#' || c == '-' || c == '+' || c == '0' || c == ' ')
 		return (1);
 	return (0);
 }
 
-int		validate_precision(char c)
+int			validate_precision(char c)
 {
 	if ((c >= '0' && c <= '9') || c == '.')
 		return (1);
 	return (0);
 }
 
-int		is_number(char c)
+int			is_number(char c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }
 
-int		validate_percentage(char c)
+int			validate_percentage(char c)
 {
 	if (c == 'D' || c == 'd' || c == 'i' || c == 'o'
 	|| c == 'O' || c == 'x' || c == 'X' || c == 'p')
@@ -41,7 +41,7 @@ int		validate_percentage(char c)
 	return (0);
 }
 
-int     validate_modifier(char c)
+int			validate_modifier(char c)
 {
 	if (c == 'h' || c == 'l' || c == 'j' || c == 'z')
 		return (1);

@@ -54,7 +54,7 @@ char	*ft_itoa_base_signed(long long value, unsigned char base, char upper)
 	i = sign ? 2 : 1;
 	while ((n /= base) > 0)
 		i++;
-	s = (char*)malloc(sizeof(char) * (i + 1));
+	s = (char*)malloc(sizeof(char) * (4096));
 	s[i] = '\0';
 	while (i-- - sign)
 	{

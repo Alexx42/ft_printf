@@ -20,7 +20,10 @@ SRC = basic_lists.c\
 	  wap.c\
 	  helpers2.c\
 	  helpers3.c\
-	  principal_functions.c
+	  principal_functions.c\
+	  conversions2.c\
+	  width_help.c\
+	  helpers5.c
 
 OBJ = $(SRC:.c=.o)
 

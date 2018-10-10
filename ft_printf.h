@@ -104,5 +104,33 @@ int					is_carac(char c);
 void				value_negative(char **arr, t_list **lst, t_flags **flags);
 void				value_zero(char **arr, t_flags **flags, const char *fmt);
 void				parse_modifier_helper(t_flags **flags, const char **fmt);
+void				ft_strdel(char **as);
+char				*conversion_z(const char *str, va_list args);
+char				*conversion_l(const char *str, va_list args);
+char				*conversion_ll(const char *str, va_list args);
+char				*conversion_j(const char *str, va_list args);
+char				*ft_chartostr(char c);
+void				width_zminus(t_list **lst, const t_flags *flags, int len);
+void				protect_value(t_list **lst, t_flags **flags, char **arr);
+int					get_len(t_list **lst, t_flags *flags, char **arr,
+					const char *fmt);
+int					precision_width(t_flags *flags);
+void				parse_zero(char **arr, t_flags **flags);
+void				arr_width(t_flags *flags, char **arr, int i[2]);
+int					ft_atoi(const char *str);
+void				precision_nb(t_list **lst, t_flags *flags, int i);
+void				precision_str(t_list **lst, t_flags *flags, char **arr,
+					int i[2]);
+
+
+
+
+
+
+
+
+
+
+
 
 #endif

@@ -21,7 +21,7 @@ int		hash_flags(t_list **lst, const char *fmt, char **arr)
 		return (0);
 	if (*fmt == 'o')
 		len = 1;
-	else if (*fmt == 'x' || *fmt == 'X' )
+	else if (*fmt == 'x' || *fmt == 'X')
 		len = 2;
 	if (*fmt == 'o' && atoi(*arr) != 0)
 		append(lst, "0", 1);
@@ -32,7 +32,7 @@ int		hash_flags(t_list **lst, const char *fmt, char **arr)
 	return (len);
 }
 
-int 	plus_flags(t_list **lst)
+int		plus_flags(t_list **lst)
 {
 	append(lst, "+", 1);
 	return (1);
@@ -53,7 +53,7 @@ int		handle_flags(t_list **lst, t_flags *flags, va_list args)
 	return (0);
 }
 
-int 	handle_flags2(t_list **lst, t_flags *flags, char **arr, const char *fmt)
+int		handle_flags2(t_list **lst, t_flags *flags, char **arr, const char *fmt)
 {
 	if (flags->width >= 0)
 		return (width(lst, flags, arr, fmt));

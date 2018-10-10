@@ -116,4 +116,3 @@ void		parse_modifier_helper(t_flags **flags, const char **fmt)
 	(*flags)->one_j = (**fmt == 'j') ? 1 : 0;
 	(*flags)->one_z = (**fmt == 'z') ? 1 : 0;
 }
-

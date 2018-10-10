@@ -40,3 +40,12 @@ int		ft_putstr(const char *str)
 		write(1, &str[i], 1);
 	return (i);
 }
+
+void	ft_strdel(char **as)
+{
+	if (as && *as)
+	{
+		free(*as);
+		*as = NULL;
+	}
+}
