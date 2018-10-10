@@ -69,7 +69,7 @@ char	*ft_itoa_base_signed(long long value, unsigned char base, char upper);
 void	append(t_list **head_ref, char *new_data, int content_size);
 int   hash_flags(t_list **lst, const char *fmt, char **arr);
 void	print_list(t_list *lst);
-void	push(t_list** head_ref, char *new_data);
+void push(t_list** head_ref, char *new_data, int content_size);
 void	parse_everything(t_flags **flags, const char **fmt);
 int		plus_flags(t_list **lst);
 int		handle_flags(t_list **lst, t_flags *flags, va_list args);

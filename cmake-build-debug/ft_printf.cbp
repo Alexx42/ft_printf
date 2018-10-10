@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ft_printf"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/nfs/2018/a/ale-goff/ft_printf/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2018/a/ale-goff/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2018/a/ale-goff/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2018/a/ale-goff/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2018/a/ale-goff/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/nfs/2018/a/ale-goff/ft_printf/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2018/a/ale-goff/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2018/a/ale-goff/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2018/a/ale-goff/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2018/a/ale-goff/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/nfs/2018/a/ale-goff/ft_printf/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2018/a/ale-goff/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2018/a/ale-goff/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2018/a/ale-goff/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2018/a/ale-goff/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ft_printf">
+				<Option output="/nfs/2018/a/ale-goff/ft_printf/cmake-build-debug/ft_printf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/nfs/2018/a/ale-goff/ft_printf/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/nfs/2018/a/ale-goff/ft_printf/."/>
+					<Add directory="/nfs/2018/a/ale-goff/ft_printf/libft"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2018/a/ale-goff/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft_printf"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2018/a/ale-goff/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2018/a/ale-goff/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2018/a/ale-goff/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ft_printf/fast">
+				<Option output="/nfs/2018/a/ale-goff/ft_printf/cmake-build-debug/ft_printf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/nfs/2018/a/ale-goff/ft_printf/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/nfs/2018/a/ale-goff/ft_printf/."/>
+					<Add directory="/nfs/2018/a/ale-goff/ft_printf/libft"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2018/a/ale-goff/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft_printf/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2018/a/ale-goff/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2018/a/ale-goff/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2018/a/ale-goff/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/basic_lists.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/conversion.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/create_array.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/flags_handle.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/ft_printf.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/ft_printf.h">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/helpers.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/libft/ft_atoi.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/libft/ft_bzero.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/libft/ft_isalnum.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/libft/ft_isalpha.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/libft/ft_strrchr.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/libft/ft_strrev.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/libft/ft_strsplit.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/libft/ft_strstr.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/libft/ft_strsub.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/libft/ft_strtrim.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/libft/ft_tolower.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/libft/ft_toupper.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/libft/libft.h">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/parse_args.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/validate_fun.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/wap.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

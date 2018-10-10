@@ -38,7 +38,7 @@ void	append(t_list **head_ref, char *new_data, int content_size)
 
 	last = *head_ref;
 	new = (t_list*)(malloc(sizeof(t_list)));
-	new->content = ft_strdup(new_data);
+	new->content = new_data;
 	new->next = NULL;
 	new->content_size = content_size;
 	if (*head_ref == NULL)
@@ -91,7 +91,9 @@ void	print_list(t_list *lst)
 
 	while (lst != NULL)
 	{
-		printf("%s", lst->content);
+		write(1, lst->content, (size_t)lst->content_size);
+//		printf("%s", lst->content);
+//		printf("c= %d", lst->content_size);
 		lst = lst->next;
 	}
 }
@@ -107,6 +109,7 @@ void	delete_list(t_list **head_ref)
 	{
 		next = current->next;
 		free(current);
+//		free(current->content);
 		current = next;
 	}
 	*head_ref = NULL;
@@ -114,14 +117,14 @@ void	delete_list(t_list **head_ref)
 
 /* Given a reference (pointer to pointer) to the head of a list
    and an int,  inserts a new node on the front of the list. */
-void push(t_list** head_ref, char *new_data)
+void push(t_list** head_ref, char *new_data, int content_size)
 {
 	/* 1. allocate node */
 	t_list *new_node = malloc(sizeof(t_list));
 
 	/* 2. put in the data  */
-	new_node->content  = strdup(new_data);
-
+	new_node->content  = ft_strdup(new_data);
+	new_node->content_size = content_size;
 	/* 3. Make next of new node as head */
 	new_node->next = (*head_ref);
 

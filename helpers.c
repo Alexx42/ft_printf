@@ -91,7 +91,7 @@ char	*ft_itoa_base(unsigned long long value, unsigned char base, char upper)
 	{
 		i++;
 	}
-	s = (char*)malloc(sizeof(char) * (i + 1));
+	s = (char*)malloc(sizeof(char) * (4096));
 	s[i] = '\0';
 	while (i--)
 	{
@@ -114,7 +114,7 @@ char	*ft_strdup(const char *s1)
 		return ("(null)");
 	while (s1[i])
 		i++;
-	if ((cpy = malloc(sizeof(char) * i + 1)) == NULL)
+	if ((cpy = malloc(sizeof(char) * 4096)) == NULL)
 		return (NULL);
 	while (s1[j])
 	{

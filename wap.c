@@ -16,7 +16,6 @@ void	parse_zero(char **arr, t_flags **flags)
 {
 	if ((*arr)[0] == '0' && (*flags)->len == 1)
 	{
-//		printf("SALUT\n");
 		(*flags)->zeros += 1;
 	}
 }
@@ -33,7 +32,10 @@ int		width(t_list **lst, t_flags *flags, char **arr, const char *fmt)
 	else
 		len = flags->len_total;
 	i = 0;
-	parse_zero(arr, &flags);
+	if (*arr)
+		parse_zero(arr, &flags);
+	if (*arr)
+		value_negative(arr, lst, &flags);
 	if (flags->width > flags->precision)
 	{
 		if (flags->minus == 0)
@@ -50,7 +52,8 @@ int		width(t_list **lst, t_flags *flags, char **arr, const char *fmt)
 				else if (flags->o_flag && len > 0)
 					append(lst, "0", 1);
 				else if (len > 0 && flags->o_flag == 0)
-					push(lst, " ");
+
+					push(lst, " ", 1);
 				else
 					append(lst, " ", 1);
 				i++;
@@ -58,9 +61,13 @@ int		width(t_list **lst, t_flags *flags, char **arr, const char *fmt)
 		}
 		else if (flags->minus)
 		{
+			int j = flags->len;
+			if (flags->precision - flags->len == 1)
+				append(lst, "0", 1);
 			while (i < (flags->width - count) - len)
 			{
-				(*arr)[flags->len + i] = ' ';
+				(*arr)[j + i] = ' ';
+				flags->len++;
 				i++;
 			}
 			(*arr)[flags->len + i] = '\0';
@@ -77,7 +84,7 @@ void	value_negative(char **arr, t_list **lst, t_flags **flags)
 	int i;
 
 	i = 0;
-	if (arr || *arr)
+	if (*arr && arr)
 	{
 		if (*arr[0] == '-' && ((*flags)->len_total > 0 || (*flags)->o_flag > 0 ||
 			(*flags)->precision > (*flags)->len))
@@ -89,7 +96,7 @@ void	value_negative(char **arr, t_list **lst, t_flags **flags)
 			}
 			(*arr)[i] = '\0';
 			(*flags)->len -= 1;
-			push(lst, "-");
+			append(lst, "-", 1);
 		}
 	}
 }
@@ -100,6 +107,7 @@ void	value_zero(char **arr, t_flags **flags)
 		(*flags)->precision == 0))
 	{
 		*arr[0] = '\0';
+		(*flags)->len--;
 	}
 }
 
@@ -108,28 +116,38 @@ int 	precision_handle(t_list **lst, t_flags *flags, char **arr)
 	int i;
 
 	i = 0;
+	if (!(*arr) || !arr)
+		return (0);
 	if (atoi(*arr) != 0)
 	{
 		while (i < flags->precision - flags->len)
 		{
+
 			append(lst, "0", 1);
 			i++;
 		}
 	}
+
 	else if (atoi(*arr) == 0)
 	{
+
 		while (i < flags->precision && flags->width > flags->precision && flags->len > 0)
 		{
 			if (flags->minus == 0)
 				append(lst, " ", 1);
 			else
+			{
 				(*arr)[i + flags->len] = ' ';
+				flags->len++;
+			}
 			i++;
 		}
 		i = 0;
-		while (i < flags->len - flags->precision)
+		int j = flags->len;
+		while (i < j - flags->precision)
 		{
-			(*arr)[i + flags->len - flags->precision] = 0;
+			(*arr)[i + j - flags->precision] = 0;
+			flags->len--;
 			i++;
 		}
 	}
