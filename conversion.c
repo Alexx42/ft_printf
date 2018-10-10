@@ -44,7 +44,7 @@ char *conversion(const char *str, va_list args)
 	else if (c == 'U')
 		return (ft_itoa_base((va_arg(args, unsigned long)), 10, 0));
 	else if (c == 'p')
-		return (ft_strjoin("0x", ft_itoa_base(va_arg(args, unsigned), 16, 0)));
+		return (ft_strjoin("0x", ft_itoa_base(va_arg(args, unsigned long), 16, 0)));
 	else
 		return (ft_chartostr(c));
 }
@@ -69,7 +69,7 @@ char *conversion_h(const char *str, va_list args)
 	else if (c == 'U')
 		return (ft_itoa_base((va_arg(args, unsigned long)), 10, 0));
 	else if (c == 'p')
-		return (ft_strjoin("0x", ft_itoa_base(va_arg(args, unsigned), 16, 0)));
+		return (ft_strjoin("0x", ft_itoa_base(va_arg(args, unsigned long), 16, 0)));
 	else
 		return (ft_chartostr(c));
 }
@@ -94,7 +94,7 @@ char *conversion_hh(const char *str, va_list args)
 	else if (c == 'U')
 		return (ft_itoa_base((va_arg(args, unsigned long)), 10, 0));
 	else if (c == 'p')
-		return (ft_strjoin("0x", ft_itoa_base(va_arg(args, unsigned), 16, 0)));
+		return (ft_strjoin("0x", ft_itoa_base(va_arg(args, unsigned long), 16, 0)));
 	else
 	return (ft_chartostr(c));
 }
@@ -119,7 +119,7 @@ char *conversion_z(const char *str, va_list args)
 	else if (c == 'U')
 		return (ft_itoa_base((va_arg(args, unsigned long)), 10, 0));
 	else if (c == 'p')
-		return (ft_strjoin("0x", ft_itoa_base(va_arg(args, unsigned), 16, 0)));
+		return (ft_strjoin("0x", ft_itoa_base(va_arg(args, unsigned long), 16, 0)));
 	else
 	return (ft_chartostr(c));
 }
@@ -144,7 +144,7 @@ char *conversion_l(const char *str, va_list args)
 	else if (c == 'U')
 		return (ft_itoa_base((va_arg(args, unsigned long)), 10, 0));
 	else if (c == 'p')
-		return (ft_strjoin("0x", ft_itoa_base(va_arg(args, unsigned), 16, 0)));
+		return (ft_strjoin("0x", ft_itoa_base(va_arg(args, unsigned long), 16, 0)));
 	else
 	return (ft_chartostr(c));
 }
@@ -169,7 +169,7 @@ char *conversion_j(const char *str, va_list args)
 	else if (c == 'U')
 		return (ft_itoa_base((va_arg(args, unsigned long)), 10, 0));
 	else if (c == 'p')
-		return (ft_strjoin("0x", ft_itoa_base(va_arg(args, unsigned), 16, 0)));
+		return (ft_strjoin("0x", ft_itoa_base(va_arg(args, unsigned long), 16, 0)));
 	else
 		return (ft_chartostr(c));
 }
@@ -194,7 +194,7 @@ char *conversion_ll(const char *str, va_list args)
 	else if (c == 'U')
 		return (ft_itoa_base((va_arg(args, unsigned long)), 10, 0));
 	else if (c == 'p')
-		return (ft_strjoin("0x", ft_itoa_base(va_arg(args, unsigned), 16, 0)));
+		return (ft_strjoin("0x", ft_itoa_base(va_arg(args, unsigned long), 16, 0)));
 	else
 	return (ft_chartostr(c));
 }
