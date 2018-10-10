@@ -42,9 +42,9 @@ int		ft_printf(const char *fmt, ...)
 			arr = choose_conversion(flags, fmt, args);
 			flags->len = arr ? (int)ft_strlen(arr) : 1;
 			flags->len_total = handle_flags(&lst, flags, args2);
-			handle_flags2(&lst, flags, &arr, fmt);
+			flags->flags_2 = handle_flags2(&lst, flags, &arr, fmt);
 			if (arr)
-				value_zero(&arr, &flags);
+				value_zero(&arr, &flags, fmt);
 			if (arr == NULL)
 			{
 				len += 1;
@@ -74,31 +74,48 @@ int		ft_printf(const char *fmt, ...)
 
 //int 	main()
 //{
-////	int i1 = ft_printf("'%-15x'\n", 542);
-////	int i2 = printf("'%-15x'\n", 542);
-////	printf("%d, %d\n", i1, i2);
-////
-////ft_printf("%c\n", 0);
+//	int i1 = ft_printf("'%-15x'\n", 542);
+//	int i2 = printf("'%-15x'\n", 542);
+//	printf("%d, %d\n", i1, i2);
 //
-////	ft_printf("%s\n", NULL);
-////	ft_printf("%.2c\n", 0);
-////	int i = ft_printf("%c\n", 0);
-////	int i2 = printf("%c\n", 0);
-////	printf("%d: %d\n\n", i, i2);
+//ft_printf("%c\n", 0);
 //
-////	ft_printf("%-15u\n", 4294967295);
-////	printf("%-15u\n", 4294967295);
+//	ft_printf("%s\n", NULL);
+//	ft_printf("%.2c\n", 0);
+//	printf("%d: %d\n\n", i1, i2);
+//
+//	ft_printf("%-15u\n", 4294967295);
+//	printf("%-15u\n", 4294967295);
 //
 //	ft_printf("%.2c\n", NULL);
 ////	printf("%.2c", NULL);
+//
+//
+//
 //
 //}
 
 //int 	main()
 //{
-//	ft_printf("'%-10.5d'\n", 4242);
-//	printf("'%-10.5d'\n", 4242);
+////	ft_printf("'%-10.5d'\n", 4242);
+////	printf("'%-10.5d'\n", 4242);
 //
+//	ft_printf("'@moulitest: %#.o %#.0o'\n", 0, 0);
+//	printf("'@moulitest: %#.o %#.0o'\n", 0, 0);
+//	 ft_printf("'@moulitest: %#.x %#.0x'\n", 0, 0);
+//	printf("'@moulitest: %#.x %#.0x'\n", 0, 0);
+//
+//	ft_printf("'@moulitest: %5.x %5.0x'\n", 0, 0);
+//	printf("'@moulitest: %5.x %5.0x'\n", 0, 0);
+//
+//	ft_printf("'@moulitest: %.x %.0x'\n", 0, 0);
+//	printf("'@moulitest: %.x %.0x'\n", 0, 0);
+//
+//	ft_printf("'@moulitest: %.o %.0o'\n", 0, 0);
+//	printf("'@moulitest: %.o %.0o'\n", 0, 0);
+//
+//	ft_printf("'@moulitest: %.d %.0d'\n", 0, 0);
+//	printf("'@moulitest: %.d %.0d'\n", 0, 0);
 //}
 
 //int 	main()

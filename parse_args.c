@@ -47,6 +47,7 @@ t_flags *init_list()
 	flags->len = 0;
 	flags->len_total = 0;
 	flags->zeros = 0;
+	flags->flags_2 = 0;
 	return (flags);
 }
 

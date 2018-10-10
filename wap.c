@@ -75,7 +75,7 @@ int		width(t_list **lst, t_flags *flags, char **arr, const char *fmt)
 	}
 	if (flags->precision > 0)
 		return (precision_handle(lst, flags, arr));
-	return (0);
+	return (len);
 }
 
 
@@ -101,10 +101,12 @@ void	value_negative(char **arr, t_list **lst, t_flags **flags)
 	}
 }
 
-void	value_zero(char **arr, t_flags **flags)
+void	value_zero(char **arr, t_flags **flags, const char *fmt)
 {
 	if (*arr[0] == '0' && (*flags)->len == 1 && ((*flags)->dot == 1 ||
-		(*flags)->precision == 0))
+		(*flags)->precision == 0) && ((*flags)->flags_2 == 2 || ((*fmt == 'x' &&
+		(*flags)->precision == 0)) || ((*fmt == 'o' && (*flags)->precision == 0
+		&& (*flags)->hash == 0)) || (((*flags)->dot == 1 && *fmt == 'd'))))
 	{
 		*arr[0] = '\0';
 		(*flags)->len--;

@@ -15,13 +15,19 @@
 
 # include <stdio.h>
 # include <stdlib.h>
-# include "libft/libft.h"
 # include <unistd.h>
 # include <stdarg.h>
 # include <string.h>
 # include <string.h>
 # include <wchar.h>
 #include <limits.h>
+
+typedef	struct	s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}				t_list;
 
 typedef struct          s_flags
 {
@@ -43,6 +49,7 @@ typedef struct          s_flags
   int len;
   int len_total;
   int zeros;
+  int flags_2;
 }                       t_flags;
 
 int			ft_printf(const char *format, ...);
@@ -88,6 +95,6 @@ void  ft_strdel(char **as);
 void  reverse(t_list **lst);
 int 	is_carac(char c);
 void	value_negative(char **arr, t_list **lst, t_flags **flags);
-void	value_zero(char **arr, t_flags **flags);
+void	value_zero(char **arr, t_flags **flags, const char *fmt);
 
 #endif
