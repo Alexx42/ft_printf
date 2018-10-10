@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   helpers.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ale-goff <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/10/09 23:47:45 by ale-goff          #+#    #+#             */
+/*   Updated: 2018/10/09 23:47:49 by ale-goff         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 char	dtoa(unsigned char digit, char uppercase)
@@ -8,12 +20,12 @@ char	dtoa(unsigned char digit, char uppercase)
 		return (char)(digit - 10 + 'A' + (!uppercase) * 32);
 }
 
-int	ft_putchar(char c)
+int		ft_putchar(char c)
 {
 	return ((int)write(1, &c, 1));
 }
 
-int	ft_puthex(unsigned long n, char upper)
+int		ft_puthex(unsigned long n, char upper)
 {
 	int len;
 
@@ -25,40 +37,19 @@ int	ft_puthex(unsigned long n, char upper)
 	return (len);
 }
 
-int	ft_putstr(const char *str)
-{
-	int i;
-
-	i = -1;
-	if (str == NULL)
-	{
-		ft_putstr("(null)");
-		return (6);
-	}
-	while (str[++i])
-	{
-		write(1, &str[i], 1);
-	}
-	return (i);
-}
-
 char	*ft_itoa_base_signed(long long value, unsigned char base, char upper)
 {
-	char	*s;
+	char		*s;
 	long long	n;
-	int		sign;
-	int		i;
+	int			sign;
+	int			i;
 
-	sign = 0;
 	if (value == INT64_MIN && base == 10)
 		return (ft_strdup("-9223372036854775808"));
 	if (value == INT64_MAX && base == 10)
 		return (ft_strdup("9223372036854775807"));
-	if (value < 0)
-	{
-		value = -value;
-		sign = 1;
-	}
+	sign = value < 0 ? 1 : 0;
+	value = value < 0 ? -value : value;
 	n = value;
 	i = sign ? 2 : 1;
 	while ((n /= base) > 0)
@@ -77,9 +68,9 @@ char	*ft_itoa_base_signed(long long value, unsigned char base, char upper)
 
 char	*ft_itoa_base(unsigned long long value, unsigned char base, char upper)
 {
-	char	*s;
+	char				*s;
 	unsigned long long	n;
-	int		i;
+	int					i;
 
 	n = value;
 	i = 1;
@@ -100,91 +91,3 @@ char	*ft_itoa_base(unsigned long long value, unsigned char base, char upper)
 	}
 	return (s);
 }
-
-
-char	*ft_strdup(const char *s1)
-{
-	char	*cpy;
-	int		i;
-	int		j;
-
-	j = 0;
-	i = 0;
-	if (s1 == NULL)
-		return ("(null)");
-	while (s1[i])
-		i++;
-	if ((cpy = malloc(sizeof(char) * 4096)) == NULL)
-		return (NULL);
-	while (s1[j])
-	{
-		cpy[j] = s1[j];
-		j++;
-	}
-	cpy[j] = '\0';
-	return (cpy);
-}
-
-char	*ft_strjoin(char const *s1, char const *s2)
-{
-	char	*new;
-
-	if (!s1 || !s2)
-		return (NULL);
-	new = (char*)malloc(sizeof(char) * ft_strlen(s1) + ft_strlen(s2) + 1);
-	if (new == NULL)
-		return (NULL);
-	ft_strcpy(new, s1);
-	ft_strcat(new, s2);
-	return (new);
-}
-
-char	*ft_strcat(char *dest, const char *src)
-{
-	int i;
-	int j;
-
-	j = 0;
-	i = 0;
-	while (dest[i])
-		i++;
-	while (src[j])
-	{
-		dest[i + j] = src[j];
-		j++;
-	}
-	dest[i + j] = '\0';
-	return (dest);
-}
-
-size_t	ft_strlen(const char *s)
-{
-	size_t i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strcpy(char *dst, const char *src)
-{
-	int i;
-
-	i = 0;
-	while (src[i])
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (dst);
-}
-
-int 	is_carac(char c)
-{
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
-}
-

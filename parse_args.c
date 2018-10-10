@@ -12,18 +12,7 @@
 
 #include "ft_printf.h"
 
-
-void	ft_strdel(char **as)
-{
-	if (as && *as)
-	{
-		free(*as);
-		*as = NULL;
-	}
-}
-
-
-t_flags *init_list()
+t_flags		*init_list(void)
 {
 	t_flags *flags;
 
@@ -51,7 +40,7 @@ t_flags *init_list()
 	return (flags);
 }
 
-void parse_args(t_flags **flags, const char **fmt)
+void		parse_args(t_flags **flags, const char **fmt)
 {
 	while (validate_flags(**fmt))
 	{
@@ -67,10 +56,9 @@ void parse_args(t_flags **flags, const char **fmt)
 			(*flags)->o_flag = 1;
 		(*fmt)++;
 	}
-
 }
 
-void parse_args_precision(t_flags **flags, const char **fmt)
+void		parse_args_precision(t_flags **flags, const char **fmt)
 {
 	while (validate_precision(**fmt))
 	{
@@ -88,50 +76,44 @@ void parse_args_precision(t_flags **flags, const char **fmt)
 		}
 		else if (is_number(**fmt))
 			(*flags)->precision = (*flags)->precision * 10 + **fmt - '0';
-
 		(*fmt)++;
 	}
 }
 
-void parse_args_modifier(t_flags **flags, const char **fmt)
+void		parse_args_modifier(t_flags **flags, const char **fmt)
 {
 	while (validate_modifier(**fmt))
 	{
-		if (**fmt == 'h')
-		{
-			(*fmt)++;
-			if (**fmt == 'h')
-				(*flags)->double_h = 1;
-			else
-			{
-				(*flags)->one_h = 1;
-				(*fmt)--;
-			}
-		}
-		else if (**fmt == 'l')
-		{
-			(*fmt)++;
-			if (**fmt == 'l')
-				(*flags)->double_l = 1;
-			else
-			{
-				(*flags)->one_l = 1;
-				(*fmt)--;
-			}
-		}
-		else if (**fmt == 'j')
-			(*flags)->one_j = 1;
-		else if (**fmt == 'z')
-			(*flags)->one_z = 1;
+		parse_modifier_helper(flags, fmt);
 		(*fmt)++;
 	}
 }
 
-void	parse_everything(t_flags **flags, const char **fmt)
+void		parse_modifier_helper(t_flags **flags, const char **fmt)
 {
-	parse_args(flags, fmt);
-	parse_args_precision(flags, fmt);
-	parse_args_modifier(flags, fmt);
+	if (**fmt == 'h')
+	{
+		(*fmt)++;
+		if (**fmt == 'h')
+			(*flags)->double_h = 1;
+		else
+		{
+			(*flags)->one_h = 1;
+			(*fmt)--;
+		}
+	}
+	else if (**fmt == 'l')
+	{
+		(*fmt)++;
+		if (**fmt == 'l')
+			(*flags)->double_l = 1;
+		else
+		{
+			(*flags)->one_l = 1;
+			(*fmt)--;
+		}
+	}
+	(*flags)->one_j = (**fmt == 'j') ? 1 : 0;
+	(*flags)->one_z = (**fmt == 'z') ? 1 : 0;
 }
-
 

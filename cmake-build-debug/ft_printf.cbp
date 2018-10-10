@@ -105,46 +105,10 @@
 		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/helpers.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/libft/ft_atoi.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/libft/ft_bzero.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/libft/ft_isalnum.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/libft/ft_isalpha.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/libft/ft_strrchr.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/libft/ft_strrev.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/libft/ft_strsplit.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/libft/ft_strstr.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/libft/ft_strsub.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/libft/ft_strtrim.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/libft/ft_tolower.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/libft/ft_toupper.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/libft/libft.h">
-			<Option target="ft_printf"/>
-		</Unit>
 		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/parse_args.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/principal_functions.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/nfs/2018/a/ale-goff/ft_printf/validate_fun.c">

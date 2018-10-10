@@ -71,26 +71,16 @@ int		ft_printf(const char *fmt, ...)
 	va_end(args);
 	return (len);
 }
-
+//
 //int 	main()
 //{
-//	int i1 = ft_printf("'%-15x'\n", 542);
-//	int i2 = printf("'%-15x'\n", 542);
-//	printf("%d, %d\n", i1, i2);
+////	ft_printf("'%03.2d'\n", -1);
+////	printf("'%03.2d'\n", -1);
 //
-//ft_printf("%c\n", 0);
-//
-//	ft_printf("%s\n", NULL);
-//	ft_printf("%.2c\n", 0);
-//	printf("%d: %d\n\n", i1, i2);
-//
-//	ft_printf("%-15u\n", 4294967295);
-//	printf("%-15u\n", 4294967295);
-//
-//	ft_printf("%.2c\n", NULL);
-////	printf("%.2c", NULL);
-//
-//
+////	ft_printf("'%-5.3s'\n", "LYDI");
+////	printf("'%-5.3s'\n", "LYDI");
+//	ft_printf("%-5.2s is a string\n", "");
+//	printf("%-5.2s is a string\n", "");
 //
 //
 //}
@@ -116,6 +106,10 @@ int		ft_printf(const char *fmt, ...)
 //
 //	ft_printf("'@moulitest: %.d %.0d'\n", 0, 0);
 //	printf("'@moulitest: %.d %.0d'\n", 0, 0);
+//
+//
+//	ft_printf("'%03.2d'\n", 0);
+//	printf("'%03.2d'\n", 0);
 //}
 
 //int 	main()

@@ -17,7 +17,10 @@ SRC = basic_lists.c\
 	  helpers.c\
 	  parse_args.c\
 	  validate_fun.c\
-	  wap.c
+	  wap.c\
+	  helpers2.c\
+	  helpers3.c\
+	  principal_functions.c
 
 OBJ = $(SRC:.c=.o)
 
