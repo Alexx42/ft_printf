@@ -38,7 +38,7 @@ int		width(t_list **lst, t_flags *flags, char **arr, const char *fmt)
 		else if (flags->minus)
 		{
 			flags->precision - flags->len == 1 ? append(lst, "0", 1) : 0;
-			while (i[0] < (flags->width - count) - len && flags->len > 0)
+			while (i[0] < (flags->width - count) - len && flags->len >= 0)
 			{
 				arr_width(flags, arr, i);
 				i[0]++;
@@ -65,7 +65,7 @@ void	value_negative(char **arr, t_list **lst, t_flags **flags)
 				i++;
 			}
 			(*arr)[i] = '\0';
-			(*flags)->len -= 1;
+			(*flags)->len--;
 			append(lst, "-", 1);
 		}
 	}
