@@ -31,7 +31,7 @@ void	assign_value(const char *fmt, t_flags **flags, t_list **lst, char **arr)
 void	free_content(t_flags *flags, t_list **lst, char *arr)
 {
 	append(lst, arr, flags->len);
-//	free(arr);
+	free(arr);
 	free(flags);
 }
 

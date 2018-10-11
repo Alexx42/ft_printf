@@ -66,7 +66,7 @@ void	delete_list(t_list **head_ref)
 	{
 		next = current->next;
 		free(current);
-//		free(current->content);
+		free(current->content);
 		current = next;
 	}
 	*head_ref = NULL;
