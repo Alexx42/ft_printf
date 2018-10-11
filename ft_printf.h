@@ -127,7 +127,7 @@ void				free_content(t_flags *flags, t_list **lst, char *arr);
 t_list				*elem_list(const char *fmt, char *buf, int *len,
 					va_list args);
 void				check_null(int *len, char **arr);
-void	renew(int *len, const char **fmt, t_list **lst, t_flags *flags);
+void	renew(int *len, const char **fmt, t_list **lst, char *arr);
 void				init_values(int *i, char **arr);
 void				get_values(char *buf, int i, const char **fmt,
 					t_flags **flags);
