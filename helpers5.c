@@ -84,6 +84,5 @@ void	renew(int *len, const char **fmt, t_list **lst)
 	(*fmt)++;
 	print_list((*lst));
 	*len += list_size((*lst));
-//	if (**fmt != 'c')
-//		delete_list(lst);
+		delete_list(lst);
 }

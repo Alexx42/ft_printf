@@ -25,7 +25,7 @@ int			ft_printf(const char *fmt, ...)
 	lst = elem_list(fmt, buf, &len, args);
 	len += list_size(lst);
 	print_list(lst);
-//	delete_list(&lst);
+	delete_list(&lst);
 	return (len);
 }
 
