@@ -23,6 +23,8 @@ char	*conversion_z(const char *str, va_list args)
 		return (ft_chartostr((char)va_arg(args, int)));
 	else if (c == 's')
 		return (ft_strdup(va_arg(args, char*)));
+	else if (c == 'S')
+		return (ft_strdup_wchar(va_arg(args, wchar_t*)));
 	else if (c == 'o' || c == 'O')
 		return (ft_itoa_base(va_arg(args, size_t), 8, 0));
 	else if (c == 'x' || c == 'X')
