@@ -44,11 +44,11 @@ int		space_flags(t_list **lst)
 	return (1);
 }
 
-int		handle_flags(t_list **lst, t_flags *flags, va_list args)
+int		handle_flags(t_list **lst, t_flags *flags, char *arr)
 {
-	if (flags->plus && va_arg(args, int) >= 0)
+	if (flags->plus && (atoi(arr) > 0 || atoi(arr) == 0))
 		return (plus_flags(lst));
-	else if (flags->space && va_arg(args, int) > 0 && flags->plus == 0)
+	else if (flags->space && (arr == NULL || atoi(arr) > 0) && flags->plus == 0)
 		return (space_flags(lst));
 	return (0);
 }

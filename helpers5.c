@@ -68,3 +68,21 @@ void	precision_str(t_list **lst, t_flags *flags, char **arr, int i[2])
 		i[0]++;
 	}
 }
+
+void	check_null(int *len, char **arr)
+{
+	if (*arr == NULL)
+	{
+		*len += 1;
+		*arr = malloc(1);
+		**arr = 0;
+	}
+}
+
+void	renew(int *len, const char **fmt, t_list **lst)
+{
+	(*fmt)++;
+	print_list((*lst));
+	*len += list_size((*lst));
+	delete_list(lst);
+}

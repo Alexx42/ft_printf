@@ -23,7 +23,8 @@ SRC = basic_lists.c\
 	  principal_functions.c\
 	  conversions2.c\
 	  width_help.c\
-	  helpers5.c
+	  helpers5.c\
+	  helpers4.c
 
 OBJ = $(SRC:.c=.o)
 

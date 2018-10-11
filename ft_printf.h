@@ -82,7 +82,7 @@ void				print_list(t_list *lst);
 void				push(t_list **head_ref, char *new_data, int content_size);
 void				parse_everything(t_flags **flags, const char **fmt);
 int					plus_flags(t_list **lst);
-int					handle_flags(t_list **lst, t_flags *flags, va_list args);
+int					handle_flags(t_list **lst, t_flags *flags, char *arr);
 void				delete_list(t_list **head_ref);
 void				append_char(t_list **head_ref, char new_data,
 					int content_size);
@@ -121,16 +121,19 @@ int					ft_atoi(const char *str);
 void				precision_nb(t_list **lst, t_flags *flags, int i);
 void				precision_str(t_list **lst, t_flags *flags, char **arr,
 					int i[2]);
-
-
-
-
-
-
-
-
-
-
-
+void				assign_value(const char *fmt, t_flags **flags, t_list **lst,
+					char **arr);
+void				free_content(t_flags *flags, t_list **lst, char *arr);
+t_list				*elem_list(const char *fmt, char *buf, int *len,
+					va_list args);
+void				check_null(int *len, char **arr);
+void				renew(int *len, const char **fmt, t_list **lst);
+void				init_values(int *i, char **arr);
+void				get_values(char *buf, int i, const char **fmt,
+					t_flags **flags);
+void				valid_free(int *len, t_flags *flags, char **arr,
+					t_list **lst);
+void				init_beg(t_list **lst, int *i);
+void				non_conversion(const char *fmt, char *buf, int *i);
 
 #endif

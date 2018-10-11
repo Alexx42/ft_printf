@@ -13,63 +13,46 @@
 #include <limits.h>
 #include "ft_printf.h"
 
-int		ft_printf(const char *fmt, ...)
+int			ft_printf(const char *fmt, ...)
 {
-	va_list args;
-	va_list args2;
-	t_flags *flags;
-	t_list *lst;
-	char buf[4096];
-	char *arr;
-	int len;
-	int i;
+	va_list		args;
+	t_list		*lst;
+	char		buf[4096];
+	int			len;
 
-	i = 0;
 	len = 0;
 	va_start(args, fmt);
-	lst = NULL;
-	while (*fmt)
-	{
-		arr = NULL;
-		if (*fmt == '%')
-		{
-			flags = init_list();
-			va_copy(args2, args);
-			buf[i] = '\0';
-			fmt++;
-			parse_everything(&flags, &fmt);
-			append(&lst, buf, i);
-			i = 0;
-			arr = choose_conversion(flags, fmt, args);
-			flags->len = arr ? (int)ft_strlen(arr) : 1;
-			flags->len_total = handle_flags(&lst, flags, args2);
-			flags->flags_2 = handle_flags2(&lst, flags, &arr, fmt);
-			if (arr)
-				value_zero(&arr, &flags, fmt);
-			if (arr == NULL)
-			{
-				len += 1;
-				arr = malloc(1);
-				*arr = 0;
-			}
-			append(&lst, arr, flags->len);
-			free(arr);
-			free(flags);
-		}
-		else
-		{
-			buf[i] = *fmt;
-			i++;
-		}
-		fmt++;
-		print_list(lst);
-		len += list_size(lst);
-		delete_list(&lst);
-	}
-	buf[i] = '\0';
-	append(&lst, buf, i);
+	lst = elem_list(fmt, buf, &len, args);
 	len += list_size(lst);
 	print_list(lst);
 	delete_list(&lst);
 	return (len);
+}
+
+t_list		*elem_list(const char *fmt, char *buf, int *len, va_list args)
+{
+	char	*arr;
+	t_flags	*flags;
+	t_list	*lst;
+	int		i;
+
+	init_beg(&lst, &i);
+	while (*fmt)
+	{
+		if (*fmt == '%')
+		{
+			get_values(buf, i, &fmt, &flags);
+			append(&lst, buf, i);
+			init_values(&i, &arr);
+			arr = choose_conversion(flags, fmt, args);
+			assign_value(fmt, &flags, &lst, &arr);
+			valid_free(len, flags, &arr, &lst);
+		}
+		else
+			non_conversion(fmt, buf, &i);
+		renew(len, &fmt, &lst);
+	}
+	buf[i] = '\0';
+	append(&lst, buf, i);
+	return (lst);
 }
