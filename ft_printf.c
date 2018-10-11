@@ -60,17 +60,20 @@ t_list		*elem_list(const char *fmt, char *buf, int *len, va_list args)
 
 //int 	main()
 //{
-//	ft_printf("'%-05d'\n", -42);
-//	printf("'%-05d'\n", -42);
-//	ft_printf("%-10s is a string\n", "");
-//	printf("%-10s is a string\n", "");
-//	ft_printf("%s %c\n", NULL, 0);
-//	printf("%s %c\n", NULL, 0);
-//	ft_printf("%s %c\n", NULL, 0);
-//	printf("%s %c\n", NULL, 0);	ft_printf("%s %c\n", NULL, 0);
-//	printf("%s %c\n", NULL, 0);	ft_printf("%s %c\n", NULL, 0);
-//	printf("%s %c\n", NULL, 0);	ft_printf("%s %c\n", NULL, 0);
-//	printf("%s %c\n", NULL, 0);
-//	while (1);
+////	ft_printf("'%-05d'\n", -42);
+////	printf("'%-05d'\n", -42);
+////	ft_printf("%-10s is a string\n", "");
+////	printf("%-10s is a string\n", "");
+////	ft_printf("%s %c\n", NULL, 0);
+////	printf("%s %c\n", NULL, 0);
+////	ft_printf("%s %c\n", NULL, 0);
+////	printf("%s %c\n", NULL, 0);	ft_printf("%s %c\n", NULL, 0);
+////	printf("%s %c\n", NULL, 0);	ft_printf("%s %c\n", NULL, 0);
+////	printf("%s %c\n", NULL, 0);	ft_printf("%s %c\n", NULL, 0);
+////	printf("%s %c\n", NULL, 0);
+//
+////ft_printf("% 2c\n", 0);
+//
+////	while (1);
 //
 //}

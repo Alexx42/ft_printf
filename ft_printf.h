@@ -136,6 +136,8 @@ void				valid_free(int *len, t_flags *flags, char **arr,
 void				init_beg(t_list **lst, int *i);
 void				non_conversion(const char *fmt, char *buf, int *i);
 void				delete_list2(t_list **head_ref, const char **fmt);
+char				*ft_strdup_wchar(wchar_t *s1);
+
 
 
 #endif

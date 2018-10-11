@@ -35,6 +35,29 @@ char	*ft_strdup(const char *s1)
 	return (cpy);
 }
 
+char	*ft_strdup_wchar(wchar_t *s1)
+{
+	char	*cpy;
+	int		i;
+	int		j;
+
+	j = 0;
+	i = 0;
+	if (s1 == NULL)
+		return (ft_strdup("(null)"));
+	while (s1[i])
+		i++;
+	if ((cpy = malloc(sizeof(char) * 4096)) == NULL)
+		return (NULL);
+	while (s1[j])
+	{
+		cpy[j] = (char)s1[j];
+		j++;
+	}
+	cpy[j] = '\0';
+	return (cpy);
+}
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*new;

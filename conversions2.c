@@ -46,9 +46,9 @@ char	*conversion_l(const char *str, va_list args)
 	if (c == 'd' || c == 'i')
 		return (ft_itoa_base_signed((va_arg(args, long int)), 10, 0));
 	else if (c == 'c' || c == 'C')
-		return (ft_chartostr((char)va_arg(args, int)));
+		return (ft_chartostr((wint_t)va_arg(args, wint_t)));
 	else if (c == 's')
-		return (ft_strdup(va_arg(args, char*)));
+		return (ft_strdup_wchar(va_arg(args, wchar_t*)));
 	else if (c == 'o' || c == 'O')
 		return (ft_itoa_base(va_arg(args, unsigned long int), 8, 0));
 	else if (c == 'x' || c == 'X')
