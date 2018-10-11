@@ -79,11 +79,11 @@ void	check_null(int *len, char **arr)
 	}
 }
 
-void	renew(int *len, const char **fmt, t_list **lst, char *arr)
+void	renew(int *len, const char **fmt, t_list **lst)
 {
 	(*fmt)++;
 	print_list((*lst));
 	*len += list_size((*lst));
-	if (arr != NULL && **fmt != 'c')
-	delete_list(lst);
+//	if (**fmt != 'c')
+//		delete_list(lst);
 }

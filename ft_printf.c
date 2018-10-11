@@ -25,7 +25,7 @@ int			ft_printf(const char *fmt, ...)
 	lst = elem_list(fmt, buf, &len, args);
 	len += list_size(lst);
 	print_list(lst);
-	delete_list(&lst);
+//	delete_list(&lst);
 	return (len);
 }
 
@@ -50,13 +50,13 @@ t_list		*elem_list(const char *fmt, char *buf, int *len, va_list args)
 		}
 		else
 			non_conversion(fmt, buf, &i);
-		renew(len, &fmt, &lst, arr);
+		renew(len, &fmt, &lst);
 	}
 	buf[i] = '\0';
 	append(&lst, buf, i);
 	return (lst);
 }
-//
+
 //int 	main()
 //{
 //	ft_printf("'%-05d'\n", -42);

@@ -72,12 +72,30 @@ void	delete_list(t_list **head_ref)
 	*head_ref = NULL;
 }
 
+
+void	delete_list2(t_list **head_ref, const char **fmt)
+{
+	t_list	*current;
+	t_list	*next;
+
+	current = *head_ref;
+	while (current != NULL)
+	{
+		next = current->next;
+			free(current);
+		if (current->content != 0 || current->content != NULL)
+			free(current->content);
+		current = next;
+	}
+	*head_ref = NULL;
+}
+
 void	push(t_list **head_ref, char *new_data, int content_size)
 {
 	t_list *new_node;
 
 	new_node = malloc(sizeof(t_list));
-	new_node->content = ft_strdup(new_data);
+	new_node->content = new_data;
 	new_node->content_size = (size_t)content_size;
 	new_node->next = (*head_ref);
 	(*head_ref) = new_node;

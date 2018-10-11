@@ -127,7 +127,7 @@ void				free_content(t_flags *flags, t_list **lst, char *arr);
 t_list				*elem_list(const char *fmt, char *buf, int *len,
 					va_list args);
 void				check_null(int *len, char **arr);
-void	renew(int *len, const char **fmt, t_list **lst, char *arr);
+void				renew(int *len, const char **fmt, t_list **lst);
 void				init_values(int *i, char **arr);
 void				get_values(char *buf, int i, const char **fmt,
 					t_flags **flags);
@@ -135,7 +135,7 @@ void				valid_free(int *len, t_flags *flags, char **arr,
 					t_list **lst);
 void				init_beg(t_list **lst, int *i);
 void				non_conversion(const char *fmt, char *buf, int *i);
-void				delete_list2(t_list **head_ref);
+void				delete_list2(t_list **head_ref, const char **fmt);
 
 
 #endif
