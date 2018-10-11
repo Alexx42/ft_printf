@@ -39,6 +39,7 @@ t_list		*elem_list(const char *fmt, char *buf, int *len, va_list args)
 	init_beg(&lst, &i);
 	while (*fmt)
 	{
+		lst = NULL;
 		if (*fmt == '%')
 		{
 			get_values(buf, i, &fmt, &flags);
