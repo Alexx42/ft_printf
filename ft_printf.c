@@ -57,7 +57,7 @@ t_list		*elem_list(const char *fmt, char *buf, int *len, va_list args)
 	append(&lst, buf, i);
 	return (lst);
 }
-//
+
 //int 	main(void)
 //{
 ////	ft_printf("%%      i 42 == |%      i|\n", 42);
@@ -70,7 +70,7 @@ t_list		*elem_list(const char *fmt, char *buf, int *len, va_list args)
 //
 //	char		*str = NULL;
 //
-////	ft_printf("%s!\n", str);
+//	ft_printf("%s!\n", str);
 //	ft_printf("%s", "pouet");
 //	ft_printf(" pouet %s !!\n", "camembert");
 //	ft_printf("%s !\n", "Ceci n'est pas un \0 exercice !");

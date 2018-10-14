@@ -20,12 +20,18 @@ char	*ft_strdup(const char *s1)
 
 	j = 0;
 	i = 0;
-	if (s1 == NULL || s1 == 0)
+	if (s1 == NULL)
 		return (ft_strdup("(null)"));
 	while (s1[i])
 		i++;
-	if (!(cpy = malloc(sizeof(char) * 4096)))
-		return (NULL);
+	if (strcmp(s1, "(null)") == 0)
+	{
+		if (!(cpy = malloc(sizeof(char) * i + 1)))
+			return (NULL);
+	}
+	else
+		if (!(cpy = malloc(sizeof(char) * 10000)))
+			return (NULL);
 	while (s1[j])
 	{
 		cpy[j] = s1[j];
