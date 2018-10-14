@@ -30,7 +30,7 @@ int		width(t_list **lst, t_flags *flags, char **arr, const char *fmt)
 	i[0] = 0;
 	count = precision_width(flags);
 	len = get_len(lst, flags, arr, fmt);
-	if (flags->width > flags->precision && flags->width > 0 && **arr != '%')
+	if (flags->width > flags->precision && flags->width > 0)
 	{
 		if (flags->minus == 0)
 			while (i[0]++ < ((flags->width + flags->zeros) - count) - (len))
@@ -103,6 +103,12 @@ int		precision_handle(t_list **lst, t_flags *flags, char **arr)
 			(*arr)[i[0] + i[1] - flags->precision] = 0;
 			flags->len--;
 			i[0]++;
+		}
+		i[1] = flags->len;
+		while (flags->len < flags->width)
+		{
+			(*arr)[i[1]] = ' ';
+			flags->len++;
 		}
 	}
 	return (i[0]);

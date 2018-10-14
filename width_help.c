@@ -35,8 +35,8 @@ void	width_zminus(t_list **lst, const t_flags *flags, int len)
 	}
 	else if (flags->o_flag && len > 0)
 		append(lst, "0", 1);
-	else if (len > 0 && flags->o_flag == 0)
-		append(lst, " ", 1);
+	else if ((flags->plus || flags->hash) && flags->o_flag == 0)
+		push(lst, " ", 1);
 	else
 		append(lst, " ", 1);
 }
