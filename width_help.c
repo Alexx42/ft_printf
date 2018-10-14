@@ -26,12 +26,20 @@ int		get_len(t_list **lst, t_flags *flags, char **arr, const char *fmt)
 
 void	width_zminus(t_list **lst, const t_flags *flags, int len)
 {
+	int i;
+
+	i = flags->len;
 	if (flags->o_flag && len == 0)
 	{
-		if (flags->width - flags->precision != flags->len)
+		if (flags->width - flags->precision != i && flags->precision > 0)
+		{
 			append(lst, " ", 1);
+		}
 		else
-			append(lst, " ", 1);
+		{
+			i++;
+			append(lst, "0", 1);
+		}
 	}
 	else if (flags->o_flag && len > 0)
 		append(lst, "0", 1);

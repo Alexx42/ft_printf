@@ -12,7 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6eef9d42-0412-4dec-9d49-d54319e42224" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ft_printf.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_printf.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prog" beforeDir="false" afterPath="$PROJECT_DIR$/prog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/width_help.c" beforeDir="false" afterPath="$PROJECT_DIR$/width_help.c" afterDir="false" />
@@ -76,7 +75,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Makefile" value="243" />
-          <entry key="c" value="23266" />
+          <entry key="c" value="23462" />
           <entry key="gitignore" value="61" />
           <entry key="h" value="1258" />
           <entry key="m" value="80" />
@@ -86,7 +85,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="99" />
-          <entry key="ObjectiveC" value="24604" />
+          <entry key="ObjectiveC" value="24800" />
           <entry key="PLAIN_TEXT" value="304" />
         </counts>
       </usages-collector>
@@ -99,8 +98,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ft_printf.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="779">
-              <caret line="60" selection-start-line="60" selection-start-column="2" selection-end-line="83" selection-end-column="3" />
+            <state relative-caret-position="714">
+              <caret line="59" lean-forward="true" selection-start-line="59" selection-start-column="2" selection-end-line="88" selection-end-column="3" />
               <folding>
                 <element signature="e#892#911#0" expanded="true" />
               </folding>
@@ -156,8 +155,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/width_help.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+            <state relative-caret-position="525">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
             </state>
           </provider>
         </entry>
@@ -550,13 +549,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helpers.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/principal_functions.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -585,17 +577,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/helpers.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/width_help.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+        <state relative-caret-position="525">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ft_printf.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="60" selection-start-line="60" selection-start-column="2" selection-end-line="83" selection-end-column="3" />
+        <state relative-caret-position="714">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-start-column="2" selection-end-line="88" selection-end-column="3" />
           <folding>
             <element signature="e#892#911#0" expanded="true" />
           </folding>
