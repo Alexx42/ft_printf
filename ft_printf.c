@@ -57,7 +57,7 @@ t_list		*elem_list(const char *fmt, char *buf, int *len, va_list args)
 	append(&lst, buf, i);
 	return (lst);
 }
-//
+
 //int 	main(void)
 //{
 ////
@@ -70,6 +70,12 @@ t_list		*elem_list(const char *fmt, char *buf, int *len, va_list args)
 //	printf("\n--------TEST---------\n\n");
 //	ft_printf("%%04i 42 == |%04i|\n", 42);
 //	printf("%%04i 42 == |%04i|\n", 42);
+//
+//
+//	printf("\n--------TEST---------\n\n");
+//	ft_printf("%%04.2i 42 == |%04.2i|\n", 42);
+//	printf("%%04.2i 42 == |%04.2i|\n", 42);
+//
 //
 ////
 ////

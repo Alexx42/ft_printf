@@ -110,7 +110,7 @@ char				*conversion_l(const char *str, va_list args);
 char				*conversion_ll(const char *str, va_list args);
 char				*conversion_j(const char *str, va_list args);
 char				*ft_chartostr(char c);
-void				width_zminus(t_list **lst, const t_flags *flags, int len);
+void				width_zminus(t_list **lst, t_flags *flags, int len);
 void				protect_value(t_list **lst, t_flags **flags, char **arr);
 int					get_len(t_list **lst, t_flags *flags, char **arr,
 					const char *fmt);

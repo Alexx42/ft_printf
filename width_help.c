@@ -24,11 +24,13 @@ int		get_len(t_list **lst, t_flags *flags, char **arr, const char *fmt)
 	return (len);
 }
 
-void	width_zminus(t_list **lst, const t_flags *flags, int len)
+void	width_zminus(t_list **lst, t_flags *flags, int len)
 {
 	int i;
 
 	i = flags->len;
+	if (flags->o_flag && flags->precision > 0)
+		flags->o_flag = 0;
 	if (flags->o_flag && len == 0)
 	{
 		if (flags->width - flags->precision != i && flags->precision > 0)
