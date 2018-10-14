@@ -20,11 +20,11 @@ char	*ft_strdup(const char *s1)
 
 	j = 0;
 	i = 0;
-	if (s1 == NULL)
+	if (s1 == NULL || s1 == 0)
 		return (ft_strdup("(null)"));
 	while (s1[i])
 		i++;
-	if ((cpy = malloc(sizeof(char) * 4096)) == NULL)
+	if (!(cpy = malloc(sizeof(char) * 4096)))
 		return (NULL);
 	while (s1[j])
 	{
@@ -47,7 +47,7 @@ char	*ft_strdup_wchar(wchar_t *s1)
 		return (ft_strdup("(null)"));
 	while (s1[i])
 		i++;
-	if ((cpy = malloc(sizeof(char) * 4096)) == NULL)
+	if (!(cpy = malloc(sizeof(char) * 4096)))
 		return (NULL);
 	while (s1[j])
 	{

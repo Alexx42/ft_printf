@@ -60,13 +60,22 @@ t_list		*elem_list(const char *fmt, char *buf, int *len, va_list args)
 
 //int 	main(void)
 //{
-//	ft_printf("%%      i 42 == |%      i|\n", 42);
-//	ft_printf("%% i -42 == |% i|\n", -42);
-//	ft_printf("%% 4i 42 == |% 4i|\n", 42);
+////	ft_printf("%%      i 42 == |%      i|\n", 42);
+////	ft_printf("%% i -42 == |% i|\n", -42);
+////	ft_printf("%% 4i 42 == |% 4i|\n", 42);
+////
+////	printf("%%      i 42 == |%      i|\n", 42);
+////	printf("%% i -42 == |% i|\n", -42);
+////	printf("%% 4i 42 == |% 4i|\n", 42);
 //
-//	printf("%%      i 42 == |%      i|\n", 42);
-//	printf("%% i -42 == |% i|\n", -42);
-//	printf("%% 4i 42 == |% 4i|\n", 42);
+//	char		*str = NULL;
+//
+//
+//	ft_printf("%s", "pouet");
+//	ft_printf(" pouet %s !!\n", "camembert");
+//	ft_printf("%s !\n", "Ceci n'est pas un \0 exercice !");
+//	ft_printf("%s!\n", "Ceci n'est toujours pas un exercice !");
+//	ft_printf("%s!\n", str);
 //
 //
 ////	while (1);
