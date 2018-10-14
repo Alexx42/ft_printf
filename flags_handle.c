@@ -23,11 +23,11 @@ int		hash_flags(t_list **lst, const char *fmt, char **arr)
 		len = 1;
 	else if (*fmt == 'x' || *fmt == 'X')
 		len = 2;
-	if (*fmt == 'o' && atoi(*arr) != 0)
+	if (*fmt == 'o' && ft_atoi(*arr) != 0)
 		append(lst, "0", 1);
-	else if (*fmt == 'x' && atoi(*arr) != 0)
+	else if (*fmt == 'x' && ft_atoi(*arr) != 0)
 		append(lst, "0x", 2);
-	else if (*fmt == 'X' && atoi(*arr) != 0)
+	else if (*fmt == 'X' && ft_atoi(*arr) != 0)
 		append(lst, "0X", 2);
 	return (len);
 }
@@ -46,9 +46,9 @@ int		space_flags(t_list **lst)
 
 int		handle_flags(t_list **lst, t_flags *flags, char *arr)
 {
-	if (flags->plus && (atoi(arr) > 0 || atoi(arr) == 0))
+	if (flags->plus && (ft_atoi(arr) > 0 || ft_atoi(arr) == 0))
 		return (plus_flags(lst));
-	else if (flags->space && (arr == NULL  || atoi(arr) > 0) && flags->plus == 0
+	else if (flags->space && (arr == NULL  || ft_atoi(arr) > 0) && flags->plus == 0
 	&& flags->len != 1)
 		return (space_flags(lst));
 	return (0);
