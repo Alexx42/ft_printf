@@ -15,7 +15,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ft_printf.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_printf.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prog" beforeDir="false" afterPath="$PROJECT_DIR$/prog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wap.c" beforeDir="false" afterPath="$PROJECT_DIR$/wap.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/width_help.c" beforeDir="false" afterPath="$PROJECT_DIR$/width_help.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,7 +76,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Makefile" value="243" />
-          <entry key="c" value="23242" />
+          <entry key="c" value="23266" />
           <entry key="gitignore" value="61" />
           <entry key="h" value="1258" />
           <entry key="m" value="80" />
@@ -86,7 +86,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="99" />
-          <entry key="ObjectiveC" value="24580" />
+          <entry key="ObjectiveC" value="24604" />
           <entry key="PLAIN_TEXT" value="304" />
         </counts>
       </usages-collector>
@@ -99,8 +99,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ft_printf.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
-              <caret line="60" selection-start-line="60" selection-start-column="2" selection-end-line="100" selection-end-column="3" />
+            <state relative-caret-position="779">
+              <caret line="60" selection-start-line="60" selection-start-column="2" selection-end-line="83" selection-end-column="3" />
               <folding>
                 <element signature="e#892#911#0" expanded="true" />
               </folding>
@@ -147,7 +147,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wap.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1017">
+            <state relative-caret-position="1635">
               <caret line="109" column="29" selection-start-line="109" selection-start-column="29" selection-end-line="109" selection-end-column="29" />
             </state>
           </provider>
@@ -156,8 +156,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/width_help.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
+            <state relative-caret-position="465">
+              <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -239,8 +239,8 @@
         <option value="$PROJECT_DIR$/basic_lists.c" />
         <option value="$PROJECT_DIR$/helpers2.c" />
         <option value="$PROJECT_DIR$/flags_handle.c" />
-        <option value="$PROJECT_DIR$/width_help.c" />
         <option value="$PROJECT_DIR$/wap.c" />
+        <option value="$PROJECT_DIR$/width_help.c" />
         <option value="$PROJECT_DIR$/ft_printf.c" />
       </list>
     </option>
@@ -550,10 +550,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/width_help.c">
+    <entry file="file://$PROJECT_DIR$/helpers.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
+        <state relative-caret-position="268">
+          <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -564,10 +564,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helpers.c">
+    <entry file="file://$PROJECT_DIR$/ft_printf.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+        <state relative-caret-position="1190">
+          <caret line="112" column="20" selection-start-line="112" selection-start-column="20" selection-end-line="112" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -578,24 +578,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ft_printf.h">
+    <entry file="file://$PROJECT_DIR$/wap.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="112" column="20" selection-start-line="112" selection-start-column="20" selection-end-line="112" selection-end-column="20" />
+        <state relative-caret-position="1635">
+          <caret line="109" column="29" selection-start-line="109" selection-start-column="29" selection-end-line="109" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wap.c">
+    <entry file="file://$PROJECT_DIR$/width_help.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1017">
-          <caret line="109" column="29" selection-start-line="109" selection-start-column="29" selection-end-line="109" selection-end-column="29" />
+        <state relative-caret-position="465">
+          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ft_printf.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="60" selection-start-line="60" selection-start-column="2" selection-end-line="100" selection-end-column="3" />
+        <state relative-caret-position="779">
+          <caret line="60" selection-start-line="60" selection-start-column="2" selection-end-line="83" selection-end-column="3" />
           <folding>
             <element signature="e#892#911#0" expanded="true" />
           </folding>

@@ -60,29 +60,12 @@ t_list		*elem_list(const char *fmt, char *buf, int *len, va_list args)
 
 //int 	main(void)
 //{
-////	ft_printf("%%      i 42 == |%      i|\n", 42);
-////	ft_printf("%% i -42 == |% i|\n", -42);
-////	ft_printf("%% 4i 42 == |% 4i|\n", 42);
-////
-////	printf("%%      i 42 == |%      i|\n", 42);
-////	printf("%% i -42 == |% i|\n", -42);
-////	printf("%% 4i 42 == |% 4i|\n", 42);
-////	ft_printf("%5%");
-////	ft_printf("%+10.5d\n", 4242);
-////	printf("%+10.5d\n", 4242);
 //
-////	ft_printf("%%-5.3s LYDI == |%-5.3s|\n", "LYDI");
-////	ft_printf("%% 4.5i 42 == |% 4.5i|\n", 42);
-////	ft_printf("%%04.5i 42 == |%04.5i|\n", 42);
-////	ft_printf("%%04.3i 42 == |%04.3i|\n", 42);
-////	printf("%%-5.3s LYDI == |%-5.3s|\n", "LYDI");
+////	ft_printf("%5.2s is a string\n", "this");
+////	printf("%5.2s is a string\n", "this");
 //
-////	printf("%% 4.5i 42 == |% 4.5i|\n", 42);
-////	printf("%%04.5i 42 == |%04.5i|\n", 42);
-////	printf("%%04.3i 42 == |%04.3i|\n", 42);
-//	ft_printf("%5.2s is a string\n", "this");
-//	printf("%5.2s is a string\n", "this");
-//
+//	ft_printf("%%04.3i 42 == |%04.3i|\n", 42);
+//	printf("%%04.3i 42 == |%04.3i|\n", 42);
 //
 //
 ////	char		*str = NULL;

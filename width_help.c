@@ -29,7 +29,7 @@ void	width_zminus(t_list **lst, const t_flags *flags, int len)
 	if (flags->o_flag && len == 0)
 	{
 		if (flags->width - flags->precision != flags->len)
-			append(lst, "0", 1);
+			append(lst, " ", 1);
 		else
 			append(lst, " ", 1);
 	}
