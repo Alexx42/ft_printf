@@ -30,7 +30,7 @@ int		width(t_list **lst, t_flags *flags, char **arr, const char *fmt)
 	i[0] = 0;
 	count = precision_width(flags);
 	len = get_len(lst, flags, arr, fmt);
-	if (flags->width > flags->precision)
+	if (flags->width > flags->precision && flags->width > 0 && **arr != '%')
 	{
 		if (flags->minus == 0)
 			while (i[0]++ < ((flags->width + flags->zeros) - count) - (len))

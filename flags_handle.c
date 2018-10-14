@@ -48,9 +48,9 @@ int		handle_flags(t_list **lst, t_flags *flags, char *arr)
 {
 	if (flags->plus && (ft_atoi(arr) > 0 || ft_atoi(arr) == 0))
 		return (plus_flags(lst));
-	else if (flags->space && (arr == NULL  || ft_atoi(arr) > 0) && flags->plus == 0
-	&& flags->len != 1)
-		return (space_flags(lst));
+	else if (flags->space && (arr == NULL  || ft_atoi(arr) > 0) &&
+	flags->plus == 0 && flags->len != 1)
+			return (space_flags(lst));
 	return (0);
 }
 
