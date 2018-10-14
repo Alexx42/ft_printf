@@ -75,6 +75,10 @@ t_list		*elem_list(const char *fmt, char *buf, int *len, va_list args)
 //	printf("\n--------TEST---------\n\n");
 //	ft_printf("%%04.2i 42 == |%04.2i|\n", 42);
 //	printf("%%04.2i 42 == |%04.2i|\n", 42);
+//	printf("\n--------TEST---------\n\n");
+//	ft_printf("|%03.2d|\n", 0);
+//	printf("|%03.2d|\n", 0);
+//
 //
 //
 ////

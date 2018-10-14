@@ -105,7 +105,7 @@ int		precision_handle(t_list **lst, t_flags *flags, char **arr)
 			i[0]++;
 		}
 		i[1] = flags->len;
-		while (flags->len < flags->width)
+		while (flags->len < flags->width && atoi(*arr) != 0)
 		{
 			(*arr)[flags->len] = ' ';
 			flags->len++;

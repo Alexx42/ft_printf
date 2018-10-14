@@ -13,9 +13,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6eef9d42-0412-4dec-9d49-d54319e42224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/ft_printf.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_printf.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_printf.h" beforeDir="false" afterPath="$PROJECT_DIR$/ft_printf.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prog" beforeDir="false" afterPath="$PROJECT_DIR$/prog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/width_help.c" beforeDir="false" afterPath="$PROJECT_DIR$/width_help.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wap.c" beforeDir="false" afterPath="$PROJECT_DIR$/wap.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,7 +75,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Makefile" value="243" />
-          <entry key="c" value="23502" />
+          <entry key="c" value="23560" />
           <entry key="gitignore" value="61" />
           <entry key="h" value="1258" />
           <entry key="m" value="80" />
@@ -86,7 +85,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="99" />
-          <entry key="ObjectiveC" value="24840" />
+          <entry key="ObjectiveC" value="24898" />
           <entry key="PLAIN_TEXT" value="304" />
         </counts>
       </usages-collector>
@@ -99,8 +98,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ft_printf.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="584">
-              <caret line="60" selection-start-line="60" selection-start-column="2" selection-end-line="94" selection-end-column="3" />
+            <state relative-caret-position="523">
+              <caret line="60" selection-start-line="60" selection-start-column="2" selection-end-line="98" selection-end-column="3" />
               <folding>
                 <element signature="e#892#911#0" expanded="true" />
               </folding>
@@ -147,8 +146,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wap.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+            <state relative-caret-position="987">
+              <caret line="107" column="49" lean-forward="true" selection-start-line="107" selection-start-column="49" selection-end-line="107" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -238,9 +237,9 @@
         <option value="$PROJECT_DIR$/basic_lists.c" />
         <option value="$PROJECT_DIR$/helpers2.c" />
         <option value="$PROJECT_DIR$/flags_handle.c" />
-        <option value="$PROJECT_DIR$/wap.c" />
         <option value="$PROJECT_DIR$/ft_printf.h" />
         <option value="$PROJECT_DIR$/width_help.c" />
+        <option value="$PROJECT_DIR$/wap.c" />
         <option value="$PROJECT_DIR$/ft_printf.c" />
       </list>
     </option>
@@ -253,8 +252,8 @@
   </component>
   <component name="OCFindUsagesOptions" text="false" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="8" />
-    <option name="y" value="51" />
+    <option name="x" value="4" />
+    <option name="y" value="114" />
     <option name="width" value="1230" />
     <option name="height" value="1337" />
   </component>
@@ -368,7 +367,7 @@
     </list>
   </component>
   <component name="ToolWindowManager">
-    <frame x="8" y="51" width="1230" height="1337" extended-state="0" />
+    <frame x="4" y="114" width="1230" height="1337" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -571,13 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wap.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ft_printf.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="875">
@@ -592,10 +584,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wap.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="987">
+          <caret line="107" column="49" lean-forward="true" selection-start-line="107" selection-start-column="49" selection-end-line="107" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ft_printf.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="60" selection-start-line="60" selection-start-column="2" selection-end-line="94" selection-end-column="3" />
+        <state relative-caret-position="523">
+          <caret line="60" selection-start-line="60" selection-start-column="2" selection-end-line="98" selection-end-column="3" />
           <folding>
             <element signature="e#892#911#0" expanded="true" />
           </folding>
