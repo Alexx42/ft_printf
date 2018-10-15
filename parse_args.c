@@ -37,6 +37,7 @@ t_flags		*init_list(void)
 	flags->len_total = 0;
 	flags->zeros = 0;
 	flags->flags_2 = 0;
+	flags->neg = 0;
 	return (flags);
 }
 

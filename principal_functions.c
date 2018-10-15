@@ -22,6 +22,12 @@ void	parse_everything(t_flags **flags, const char **fmt)
 void	assign_value(const char *fmt, t_flags **flags, t_list **lst, char **arr)
 {
 	(*flags)->len = (*arr) ? (int)ft_strlen((*arr)) : 1;
+	if(((*flags)->precision == 0 && (*arr)[0] == '0' && (*fmt != 'o'
+	|| ((*flags)->width > 0 && *fmt == 'o'))))
+	{
+		(*flags)->len = 0;
+		(*arr)[0] = '\0';
+	}
 	(*flags)->len_total = handle_flags(lst, (*flags), (*arr));
 	(*flags)->flags_2 = handle_flags2(lst, (*flags), arr, fmt);
 	if ((*arr))

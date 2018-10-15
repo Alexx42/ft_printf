@@ -34,20 +34,15 @@ void	width_zminus(t_list **lst, t_flags *flags, int len)
 	if (flags->o_flag && len == 0)
 	{
 		if (flags->width - flags->precision != i && flags->precision > 0)
-		{
 			append(lst, " ", 1);
-		}
 		else
-		{
-			i++;
 			append(lst, "0", 1);
-		}
 	}
 	else if (flags->o_flag && len > 0)
 		append(lst, "0", 1);
 	else if ((flags->plus || flags->hash) && flags->o_flag == 0)
 		push(lst, " ", 1);
-	else
+	else if (flags->neg == 0)
 		append(lst, " ", 1);
 }
 
@@ -65,8 +60,8 @@ int		precision_width(t_flags *flags)
 			(flags->precision) : flags->len);
 }
 
-void	arr_width(t_flags *flags, char **arr, int i[2])
+void	arr_width(t_flags **flags, char **arr, int i[2])
 {
 	(*arr)[i[1] + i[0]] = ' ';
-	flags->len++;
+	(*flags)->len++;
 }

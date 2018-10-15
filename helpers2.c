@@ -24,13 +24,7 @@ char	*ft_strdup(const char *s1)
 		return (ft_strdup("(null)"));
 	while (s1[i])
 		i++;
-	if (strcmp(s1, "(null)") == 0)
-	{
-		if (!(cpy = malloc(sizeof(char) * i + 1)))
-			return (NULL);
-	}
-	else
-		if (!(cpy = malloc(sizeof(char) * 10000)))
+	if (!(cpy = malloc(sizeof(char) * i + 20)))
 			return (NULL);
 	while (s1[j])
 	{

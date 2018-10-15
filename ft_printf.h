@@ -50,6 +50,7 @@ typedef struct		s_flags
 	int				len_total;
 	int				zeros;
 	int				flags_2;
+	int 			neg;
 }					t_flags;
 
 int					ft_printf(const char *format, ...);
@@ -116,7 +117,7 @@ int					get_len(t_list **lst, t_flags *flags, char **arr,
 					const char *fmt);
 int					precision_width(t_flags *flags);
 void				parse_zero(char **arr, t_flags **flags);
-void				arr_width(t_flags *flags, char **arr, int i[2]);
+void				arr_width(t_flags **flags, char **arr, int i[2]);
 int					ft_atoi(const char *str);
 void				precision_nb(t_list **lst, t_flags *flags, int i);
 void				precision_str(t_list **lst, t_flags *flags, char **arr,

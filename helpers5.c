@@ -40,7 +40,8 @@ int		ft_atoi(const char *str)
 
 void	precision_nb(t_list **lst, t_flags *flags, int i)
 {
-	while (i < flags->precision - flags->len)
+
+	while (i < flags->precision - flags->len + flags->zeros)
 	{
 		append(lst, "0", 1);
 		i++;
@@ -49,6 +50,7 @@ void	precision_nb(t_list **lst, t_flags *flags, int i)
 
 void	precision_str(t_list **lst, t_flags *flags, char **arr, int i[2])
 {
+
 	while (i[0] < flags->precision && flags->width > flags->precision &&
 	flags->len > 0)
 	{

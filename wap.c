@@ -15,9 +15,7 @@
 void	parse_zero(char **arr, t_flags **flags)
 {
 	if ((*arr)[0] == '0' && (*flags)->len == 1)
-	{
 		(*flags)->zeros += 1;
-	}
 }
 
 int		width(t_list **lst, t_flags *flags, char **arr, const char *fmt)
@@ -33,17 +31,17 @@ int		width(t_list **lst, t_flags *flags, char **arr, const char *fmt)
 	if (flags->width > flags->precision && flags->width > 0)
 	{
 		if (flags->minus == 0)
-			while (i[0]++ < ((flags->width + flags->zeros) - count) - (len))
+			while (i[0]++ < ((flags->width) - count) - (len))
 				width_zminus(lst, flags, len);
 		else if (flags->minus)
 		{
 			flags->precision - flags->len == 1 ? append(lst, "0", 1) : 0;
 			while (i[0] < (flags->width - count) - len && flags->len >= 0)
 			{
-				arr_width(flags, arr, i);
+				arr_width(&flags, arr, i);
 				i[0]++;
 			}
-			(*arr)[flags->len + i[0]] = '\0';
+			(*arr)[flags->len + i[0] + 1] = '\0';
 		}
 	}
 	return (flags->precision) > 0 ? precision_handle(lst, flags, arr) : len;
@@ -66,6 +64,7 @@ void	value_negative(char **arr, t_list **lst, t_flags **flags)
 			}
 			(*arr)[i] = '\0';
 			(*flags)->len--;
+			(*flags)->neg = 1;
 			append(lst, "-", 1);
 		}
 	}
@@ -90,7 +89,7 @@ int		precision_handle(t_list **lst, t_flags *flags, char **arr)
 	i[0] = 0;
 	if (!(*arr) || !arr)
 		return (0);
-	if (ft_atoi(*arr) != 0)
+	if (ft_atoi(*arr) != 0 || (ft_atoi(*arr) == 0 && flags->len == 1))
 		precision_nb(lst, flags, i[0]);
 	else if (ft_atoi(*arr) == 0)
 	{
@@ -104,8 +103,7 @@ int		precision_handle(t_list **lst, t_flags *flags, char **arr)
 			flags->len--;
 			i[0]++;
 		}
-		i[1] = flags->len;
-		while (flags->len < flags->width && atoi(*arr) != 0)
+		while (flags->len < flags->width && flags->minus == 1)
 		{
 			(*arr)[flags->len] = ' ';
 			flags->len++;
