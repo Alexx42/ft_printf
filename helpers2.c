@@ -47,7 +47,7 @@ char	*ft_strdup_wchar(wchar_t *s1)
 		return (ft_strdup("(null)"));
 	while (s1[i])
 		i++;
-	if (!(cpy = malloc(sizeof(char) * 4096)))
+	if (!(cpy = malloc(sizeof(char) * i + 25)))
 		return (NULL);
 	while (s1[j])
 	{

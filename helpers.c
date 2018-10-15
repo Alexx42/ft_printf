@@ -79,9 +79,7 @@ char	*ft_itoa_base(unsigned long long value, unsigned char base, char upper)
 	if (value == INT64_MAX && base == 10)
 		return (ft_strdup("9223372036854775807"));
 	while ((n /= base) > 0)
-	{
 		i++;
-	}
 	s = (char*)malloc(sizeof(char) * (4096));
 	s[i] = '\0';
 	while (i--)

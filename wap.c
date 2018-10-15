@@ -41,7 +41,7 @@ int		width(t_list **lst, t_flags *flags, char **arr, const char *fmt)
 				arr_width(&flags, arr, i);
 				i[0]++;
 			}
-			(*arr)[flags->len + i[0] + 1] = '\0';
+			(*arr)[flags->len + i[0]] = '\0';
 		}
 	}
 	return (flags->precision) > 0 ? precision_handle(lst, flags, arr) : len;

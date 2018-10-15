@@ -62,6 +62,6 @@ int		precision_width(t_flags *flags)
 
 void	arr_width(t_flags **flags, char **arr, int i[2])
 {
-	(*arr)[i[1] + i[0]] = ' ';
+	(*arr)[i[1] + i[0] - (*flags)->neg] = ' ';
 	(*flags)->len++;
 }
