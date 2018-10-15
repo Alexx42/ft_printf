@@ -6,7 +6,7 @@
 /*   By: ale-goff <ale-goff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/06 14:17:40 by ale-goff          #+#    #+#             */
-/*   Updated: 2018/10/07 01:08:09 by ale-goff         ###   ########.fr       */
+/*   Updated: 2018/10/14 20:25:31 by ale-goff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,11 +103,9 @@ int		precision_handle(t_list **lst, t_flags *flags, char **arr)
 			flags->len--;
 			i[0]++;
 		}
-		while (flags->len < flags->width && flags->minus == 1)
-		{
+		flags->len += -1;
+		while (++flags->len < flags->width && flags->minus == 1)
 			(*arr)[flags->len] = ' ';
-			flags->len++;
-		}
 	}
 	return (i[0]);
 }

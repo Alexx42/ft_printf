@@ -6,7 +6,7 @@
 /*   By: ale-goff <ale-goff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 18:16:09 by ale-goff          #+#    #+#             */
-/*   Updated: 2018/10/10 00:22:21 by ale-goff         ###   ########.fr       */
+/*   Updated: 2018/10/14 20:25:54 by ale-goff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ typedef struct		s_flags
 	int				len_total;
 	int				zeros;
 	int				flags_2;
-	int 			neg;
+	int				neg;
 }					t_flags;
 
 int					ft_printf(const char *format, ...);
@@ -138,7 +138,5 @@ void				init_beg(t_list **lst, int *i);
 void				non_conversion(const char *fmt, char *buf, int *i);
 void				delete_list2(t_list **head_ref, const char **fmt);
 char				*ft_strdup_wchar(wchar_t *s1);
-
-
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ale-goff <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/10 16:28:54 by ale-goff          #+#    #+#             */
-/*   Updated: 2018/10/10 16:28:56 by ale-goff         ###   ########.fr       */
+/*   Updated: 2018/10/14 20:21:48 by ale-goff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ void	precision_nb(t_list **lst, t_flags *flags, int i)
 
 void	precision_str(t_list **lst, t_flags *flags, char **arr, int i[2])
 {
-
 	while (i[0] < flags->precision && flags->width > flags->precision &&
 	flags->len > 0)
 	{

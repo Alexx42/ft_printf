@@ -6,7 +6,7 @@
 /*   By: ale-goff <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/09 23:45:55 by ale-goff          #+#    #+#             */
-/*   Updated: 2018/10/09 23:45:56 by ale-goff         ###   ########.fr       */
+/*   Updated: 2018/10/14 20:21:34 by ale-goff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strdup(const char *s1)
 	while (s1[i])
 		i++;
 	if (!(cpy = malloc(sizeof(char) * i + 20)))
-			return (NULL);
+		return (NULL);
 	while (s1[j])
 	{
 		cpy[j] = s1[j];
@@ -99,11 +99,4 @@ size_t	ft_strlen(const char *s)
 	while (s[i])
 		i++;
 	return (i);
-}
-
-int		is_carac(char c)
-{
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
 }
