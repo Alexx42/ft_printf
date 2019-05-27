@@ -6,7 +6,7 @@
 /*   By: ale-goff <ale-goff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/04 22:07:38 by ale-goff          #+#    #+#             */
-/*   Updated: 2019/05/26 21:57:54 by ale-goff         ###   ########.fr       */
+/*   Updated: 2019/05/26 22:03:04 by ale-goff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	append(t_list_pf **head_ref, char *new_data, int content_size)
 
 	last = *head_ref;
 	new = (t_list_pf*)(malloc(sizeof(t_list_pf)));
-	new->content = ft_strdup(new_data);
+	new->content = ft_strdup_pf(new_data);
 	new->next = NULL;
 	new->content_size = (size_t)content_size;
 	if (*head_ref == NULL)
@@ -41,7 +41,7 @@ int		list_size(t_list_pf *lst)
 	count = 0;
 	while (cur != NULL)
 	{
-		count += ft_strlen(cur->content);
+		count += ft_strlen_pf(cur->content);
 		cur = cur->next;
 	}
 	return (count);
@@ -77,7 +77,7 @@ void	push_lst(t_list_pf **head_ref, char *new_data, int content_size)
 	t_list_pf *new_node;
 
 	new_node = malloc(sizeof(t_list_pf));
-	new_node->content = ft_strdup(new_data);
+	new_node->content = ft_strdup_pf(new_data);
 	new_node->content_size = (size_t)content_size;
 	new_node->next = (*head_ref);
 	(*head_ref) = new_node;

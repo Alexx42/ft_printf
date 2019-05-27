@@ -6,7 +6,7 @@
 /*   By: ale-goff <ale-goff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/10 00:11:14 by ale-goff          #+#    #+#             */
-/*   Updated: 2019/05/26 21:56:03 by ale-goff         ###   ########.fr       */
+/*   Updated: 2019/05/26 22:03:04 by ale-goff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	parse_everything(t_flags **flags, const char **fmt)
 void	assign_value(const char *fmt, t_flags **flags, t_list_pf **lst,
 		char **arr)
 {
-	(*flags)->len = (*arr) ? (int)ft_strlen((*arr)) : 1;
+	(*flags)->len = (*arr) ? (int)ft_strlen_pf((*arr)) : 1;
 	if (((*flags)->precision == 0 && (*arr)[0] == '0' && (*fmt != 'o'
 	|| ((*flags)->width > 0 && *fmt == 'o'))))
 	{

@@ -6,7 +6,7 @@
 /*   By: ale-goff <ale-goff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 18:16:09 by ale-goff          #+#    #+#             */
-/*   Updated: 2019/05/26 22:00:47 by ale-goff         ###   ########.fr       */
+/*   Updated: 2019/05/26 22:03:04 by ale-goff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,10 +90,10 @@ int					handle_flags2(t_list_pf **lst, t_flags *flags, char **arr,
 					const char *fmt);
 int					precision_handle(t_list_pf **lst, t_flags *flags,
 					char **arr);
-char				*ft_strdup(const char *s1);
-char				*ft_strjoin(char const *s1, char const *s2);
-char				*ft_strcat(char *dest, const char *src);
-size_t				ft_strlen(const char *s);
+char				*ft_strdup_pf(const char *s1);
+char				*ft_strjoin_pf(char const *s1, char const *s2);
+char				*ft_strcat_pf(char *dest, const char *src);
+size_t				ft_strlen_pf(const char *s);
 char				*ft_strcpy(char *dst, const char *src);
 void				ft_strdel(char **as);
 void				reverse(t_list_pf **lst);
@@ -133,6 +133,6 @@ void				valid_free(int *len, t_flags *flags, char **arr,
 void				init_beg(t_list_pf **lst, int *i);
 void				non_conversion(const char *fmt, char *buf, int *i);
 void				delete_list2(t_list_pf **head_ref, const char **fmt);
-char				*ft_strdup_wchar(wchar_t *s1);
+char				*ft_strdup_pf_wchar(wchar_t *s1);
 
 #endif

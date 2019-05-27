@@ -6,7 +6,7 @@
 /*   By: ale-goff <ale-goff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 18:50:49 by ale-goff          #+#    #+#             */
-/*   Updated: 2019/05/26 21:55:43 by ale-goff         ###   ########.fr       */
+/*   Updated: 2019/05/26 22:02:54 by ale-goff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*conversion(const char *str, va_list args)
 	else if (c == 'c' || c == 'C')
 		return (ft_chartostr((char)va_arg(args, int)));
 	else if (c == 's')
-		return (ft_strdup(va_arg(args, char*)));
+		return (ft_strdup_pf(va_arg(args, char*)));
 	else if (c == 'o' || c == 'O')
 		return (ft_itoa_b_pf(va_arg(args, unsigned int), 8, 0));
 	else if (c == 'x' || c == 'X')
@@ -44,7 +44,7 @@ char	*conversion(const char *str, va_list args)
 	else if (c == 'U')
 		return (ft_itoa_b_pf((va_arg(args, unsigned long)), 10, 0));
 	else if (c == 'p')
-		return (ft_strjoin("0x", ft_itoa_b_pf(va_arg(args, unsigned long),
+		return (ft_strjoin_pf("0x", ft_itoa_b_pf(va_arg(args, unsigned long),
 			16, 0)));
 	else
 		return (ft_chartostr(c));
@@ -60,7 +60,7 @@ char	*conversion_h(const char *str, va_list args)
 	else if (c == 'c' || c == 'C')
 		return (ft_chartostr((char)va_arg(args, int)));
 	else if (c == 's')
-		return (ft_strdup(va_arg(args, char*)));
+		return (ft_strdup_pf(va_arg(args, char*)));
 	else if (c == 'o' || c == 'O')
 		return (ft_itoa_b_pf((unsigned short)va_arg(args, unsigned int), 8, 0));
 	else if (c == 'x' || c == 'X')
@@ -73,7 +73,7 @@ char	*conversion_h(const char *str, va_list args)
 		return (ft_itoa_b_pf((va_arg(args, unsigned long)),
 			10, 0));
 	else if (c == 'p')
-		return (ft_strjoin("0x", ft_itoa_b_pf(va_arg(args, unsigned long), 16,
+		return (ft_strjoin_pf("0x", ft_itoa_b_pf(va_arg(args, unsigned long), 16,
 			0)));
 	else
 		return (ft_chartostr(c));
@@ -89,7 +89,7 @@ char	*conversion_hh(const char *str, va_list args)
 	else if (c == 'c' || c == 'C')
 		return (ft_chartostr((char)va_arg(args, int)));
 	else if (c == 's')
-		return (ft_strdup(va_arg(args, char*)));
+		return (ft_strdup_pf(va_arg(args, char*)));
 	else if (c == 'o' || c == 'O')
 		return (ft_itoa_b_pf((unsigned char)va_arg(args, unsigned int), 8, 0));
 	else if (c == 'x' || c == 'X')
@@ -101,7 +101,7 @@ char	*conversion_hh(const char *str, va_list args)
 	else if (c == 'U')
 		return (ft_itoa_b_pf((va_arg(args, unsigned long)), 10, 0));
 	else if (c == 'p')
-		return (ft_strjoin("0x", ft_itoa_b_pf(va_arg(args, unsigned long),
+		return (ft_strjoin_pf("0x", ft_itoa_b_pf(va_arg(args, unsigned long),
 			16, 0)));
 	else
 		return (ft_chartostr(c));

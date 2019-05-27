@@ -6,7 +6,7 @@
 /*   By: ale-goff <ale-goff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/09 23:47:45 by ale-goff          #+#    #+#             */
-/*   Updated: 2019/05/26 21:59:28 by ale-goff         ###   ########.fr       */
+/*   Updated: 2019/05/26 22:02:42 by ale-goff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,9 @@ char	*ft_itoa_b_pf_signed(long long value, unsigned char base, char upper)
 	int			i;
 
 	if (value == INT64_MIN && base == 10)
-		return (ft_strdup("-9223372036854775808"));
+		return (ft_strdup_pf("-9223372036854775808"));
 	if (value == INT64_MAX && base == 10)
-		return (ft_strdup("9223372036854775807"));
+		return (ft_strdup_pf("9223372036854775807"));
 	sign = value < 0 ? 1 : 0;
 	value = value < 0 ? -value : value;
 	n = value;
@@ -75,9 +75,9 @@ char	*ft_itoa_b_pf(unsigned long long value, unsigned char base, char upper)
 	n = value;
 	i = 1;
 	if ((long)value == INT64_MIN && base == 10)
-		return (ft_strdup("-9223372036854775807"));
+		return (ft_strdup_pf("-9223372036854775807"));
 	if (value == INT64_MAX && base == 10)
-		return (ft_strdup("9223372036854775807"));
+		return (ft_strdup_pf("9223372036854775807"));
 	while ((n /= base) > 0)
 		i++;
 	s = (char*)malloc(sizeof(char) * (4096));
