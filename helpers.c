@@ -6,7 +6,7 @@
 /*   By: ale-goff <ale-goff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/09 23:47:45 by ale-goff          #+#    #+#             */
-/*   Updated: 2019/05/26 21:55:43 by ale-goff         ###   ########.fr       */
+/*   Updated: 2019/05/26 21:59:28 by ale-goff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	dtoa(unsigned char digit, char uppercase)
 		return (char)(digit - 10 + 'A' + (!uppercase) * 32);
 }
 
-int		ft_putchar(char c)
+int		ft_putchar_pf(char c)
 {
 	return ((int)write(1, &c, 1));
 }
@@ -33,7 +33,7 @@ int		ft_puthex(unsigned long n, char upper)
 	if (n >= 16)
 		len += ft_puthex(n / 16, upper);
 	n = n % 16;
-	len += ft_putchar(dtoa(n, upper));
+	len += ft_putchar_pf(dtoa(n, upper));
 	return (len);
 }
 

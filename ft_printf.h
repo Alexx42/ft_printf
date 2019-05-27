@@ -6,7 +6,7 @@
 /*   By: ale-goff <ale-goff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 18:16:09 by ale-goff          #+#    #+#             */
-/*   Updated: 2019/05/26 21:57:54 by ale-goff         ###   ########.fr       */
+/*   Updated: 2019/05/26 21:59:28 by ale-goff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,8 @@ typedef struct		s_flags
 }					t_flags;
 
 int					ft_printf(const char *format, ...);
-int					ft_putstr(const char *str);
-int					ft_putchar(char c);
+int					ft_putstr_pf(const char *str);
+int					ft_putchar_pf(char c);
 int					ft_putnbr(int n);
 char				*conversion(const char *str, va_list args);
 t_flags				*init_list_pf();

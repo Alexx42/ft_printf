@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   helpers3.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ale-goff <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ale-goff <ale-goff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/09 23:46:53 by ale-goff          #+#    #+#             */
-/*   Updated: 2018/10/09 23:46:54 by ale-goff         ###   ########.fr       */
+/*   Updated: 2019/05/26 21:59:15 by ale-goff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,14 @@ char	*ft_strcpy(char *dst, const char *src)
 	return (dst);
 }
 
-int		ft_putstr(const char *str)
+int		ft_putstr_pf(const char *str)
 {
 	int i;
 
 	i = -1;
 	if (str == NULL)
 	{
-		ft_putstr("(null)");
+		ft_putstr_pf("(null)");
 		return (6);
 	}
 	while (str[++i])
