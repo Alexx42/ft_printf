@@ -6,13 +6,13 @@
 /*   By: ale-goff <ale-goff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/04 21:58:06 by ale-goff          #+#    #+#             */
-/*   Updated: 2018/10/14 20:20:12 by ale-goff         ###   ########.fr       */
+/*   Updated: 2019/05/26 21:57:13 by ale-goff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		hash_flags(t_list **lst, const char *fmt, char **arr)
+int		hash_flags(t_list_pf **lst, const char *fmt, char **arr)
 {
 	int len;
 
@@ -32,19 +32,19 @@ int		hash_flags(t_list **lst, const char *fmt, char **arr)
 	return (len);
 }
 
-int		plus_flags(t_list **lst)
+int		plus_flags(t_list_pf **lst)
 {
 	append(lst, "+", 1);
 	return (1);
 }
 
-int		space_flags(t_list **lst)
+int		space_flags(t_list_pf **lst)
 {
 	append(lst, " ", 1);
 	return (1);
 }
 
-int		handle_flags(t_list **lst, t_flags *flags, char *arr)
+int		handle_flags(t_list_pf **lst, t_flags *flags, char *arr)
 {
 	if (flags->plus && (ft_atoi(arr) > 0 || ft_atoi(arr) == 0))
 		return (plus_flags(lst));
@@ -54,7 +54,8 @@ int		handle_flags(t_list **lst, t_flags *flags, char *arr)
 	return (0);
 }
 
-int		handle_flags2(t_list **lst, t_flags *flags, char **arr, const char *fmt)
+int		handle_flags2(t_list_pf **lst, t_flags *flags, char **arr,
+		const char *fmt)
 {
 	if (flags->width >= 0)
 		return (width(lst, flags, arr, fmt));

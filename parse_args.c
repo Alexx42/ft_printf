@@ -6,13 +6,13 @@
 /*   By: ale-goff <ale-goff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/22 10:31:00 by ale-goff          #+#    #+#             */
-/*   Updated: 2018/09/25 23:19:27 by ale-goff         ###   ########.fr       */
+/*   Updated: 2019/05/26 21:53:42 by ale-goff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-t_flags		*init_list(void)
+t_flags		*init_list_pf(void)
 {
 	t_flags *flags;
 

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   width_help.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ale-goff <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ale-goff <ale-goff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/10 16:06:25 by ale-goff          #+#    #+#             */
-/*   Updated: 2018/10/10 16:06:28 by ale-goff         ###   ########.fr       */
+/*   Updated: 2019/05/26 21:57:54 by ale-goff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		get_len(t_list **lst, t_flags *flags, char **arr, const char *fmt)
+int		get_len(t_list_pf **lst, t_flags *flags, char **arr, const char *fmt)
 {
 	int len;
 
@@ -24,7 +24,7 @@ int		get_len(t_list **lst, t_flags *flags, char **arr, const char *fmt)
 	return (len);
 }
 
-void	width_zminus(t_list **lst, t_flags *flags, int len)
+void	width_zminus(t_list_pf **lst, t_flags *flags, int len)
 {
 	int i;
 
@@ -41,12 +41,12 @@ void	width_zminus(t_list **lst, t_flags *flags, int len)
 	else if (flags->o_flag && len > 0)
 		append(lst, "0", 1);
 	else if ((flags->plus || flags->hash) && flags->o_flag == 0)
-		push(lst, " ", 1);
+		push_lst(lst, " ", 1);
 	else if (flags->neg == 0)
 		append(lst, " ", 1);
 }
 
-void	protect_value(t_list **lst, t_flags **flags, char **arr)
+void	protect_value(t_list_pf **lst, t_flags **flags, char **arr)
 {
 	if (*arr)
 		parse_zero(arr, flags);

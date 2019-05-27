@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   basic_lists.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ale-goff <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ale-goff <ale-goff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/04 22:07:38 by ale-goff          #+#    #+#             */
-/*   Updated: 2018/10/04 22:07:39 by ale-goff         ###   ########.fr       */
+/*   Updated: 2019/05/26 21:57:54 by ale-goff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	append(t_list **head_ref, char *new_data, int content_size)
+void	append(t_list_pf **head_ref, char *new_data, int content_size)
 {
-	t_list *new;
-	t_list *last;
+	t_list_pf *new;
+	t_list_pf *last;
 
 	last = *head_ref;
-	new = (t_list*)(malloc(sizeof(t_list)));
+	new = (t_list_pf*)(malloc(sizeof(t_list_pf)));
 	new->content = ft_strdup(new_data);
 	new->next = NULL;
 	new->content_size = (size_t)content_size;
@@ -32,10 +32,10 @@ void	append(t_list **head_ref, char *new_data, int content_size)
 	last->next = new;
 }
 
-int		list_size(t_list *lst)
+int		list_size(t_list_pf *lst)
 {
-	int		count;
-	t_list	*cur;
+	int			count;
+	t_list_pf	*cur;
 
 	cur = lst;
 	count = 0;
@@ -47,7 +47,7 @@ int		list_size(t_list *lst)
 	return (count);
 }
 
-void	print_list(t_list *lst)
+void	print_list_pf(t_list_pf *lst)
 {
 	while (lst != NULL)
 	{
@@ -56,10 +56,10 @@ void	print_list(t_list *lst)
 	}
 }
 
-void	delete_list(t_list **head_ref)
+void	delete_list(t_list_pf **head_ref)
 {
-	t_list	*current;
-	t_list	*next;
+	t_list_pf	*current;
+	t_list_pf	*next;
 
 	current = *head_ref;
 	while (current != NULL)
@@ -72,11 +72,11 @@ void	delete_list(t_list **head_ref)
 	*head_ref = NULL;
 }
 
-void	push(t_list **head_ref, char *new_data, int content_size)
+void	push_lst(t_list_pf **head_ref, char *new_data, int content_size)
 {
-	t_list *new_node;
+	t_list_pf *new_node;
 
-	new_node = malloc(sizeof(t_list));
+	new_node = malloc(sizeof(t_list_pf));
 	new_node->content = ft_strdup(new_data);
 	new_node->content_size = (size_t)content_size;
 	new_node->next = (*head_ref);

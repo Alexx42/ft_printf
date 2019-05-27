@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   principal_functions.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ale-goff <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ale-goff <ale-goff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/10 00:11:14 by ale-goff          #+#    #+#             */
-/*   Updated: 2018/10/14 20:22:10 by ale-goff         ###   ########.fr       */
+/*   Updated: 2019/05/26 21:56:03 by ale-goff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ void	parse_everything(t_flags **flags, const char **fmt)
 	parse_args_modifier(flags, fmt);
 }
 
-void	assign_value(const char *fmt, t_flags **flags, t_list **lst, char **arr)
+void	assign_value(const char *fmt, t_flags **flags, t_list_pf **lst,
+		char **arr)
 {
 	(*flags)->len = (*arr) ? (int)ft_strlen((*arr)) : 1;
 	if (((*flags)->precision == 0 && (*arr)[0] == '0' && (*fmt != 'o'
@@ -34,7 +35,7 @@ void	assign_value(const char *fmt, t_flags **flags, t_list **lst, char **arr)
 		value_zero(arr, flags, fmt);
 }
 
-void	free_content(t_flags *flags, t_list **lst, char *arr)
+void	free_content(t_flags *flags, t_list_pf **lst, char *arr)
 {
 	append(lst, arr, flags->len);
 	free(arr);
@@ -43,7 +44,7 @@ void	free_content(t_flags *flags, t_list **lst, char *arr)
 
 void	get_values(char *buf, int i, const char **fmt, t_flags **flags)
 {
-	(*flags) = init_list();
+	(*flags) = init_list_pf();
 	buf[i] = '\0';
 	(*fmt)++;
 	parse_everything(flags, fmt);

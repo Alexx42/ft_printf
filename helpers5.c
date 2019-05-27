@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   helpers5.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ale-goff <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ale-goff <ale-goff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/10 16:28:54 by ale-goff          #+#    #+#             */
-/*   Updated: 2018/10/14 20:21:48 by ale-goff         ###   ########.fr       */
+/*   Updated: 2019/05/26 21:53:42 by ale-goff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int		ft_atoi(const char *str)
 	return (sign * num);
 }
 
-void	precision_nb(t_list **lst, t_flags *flags, int i)
+void	precision_nb(t_list_pf **lst, t_flags *flags, int i)
 {
 	while (i < flags->precision - flags->len + flags->zeros)
 	{
@@ -47,7 +47,7 @@ void	precision_nb(t_list **lst, t_flags *flags, int i)
 	}
 }
 
-void	precision_str(t_list **lst, t_flags *flags, char **arr, int i[2])
+void	precision_str(t_list_pf **lst, t_flags *flags, char **arr, int i[2])
 {
 	while (i[0] < flags->precision && flags->width > flags->precision &&
 	flags->len > 0)
@@ -79,10 +79,10 @@ void	check_null(int *len, char **arr)
 	}
 }
 
-void	renew(int *len, const char **fmt, t_list **lst)
+void	renew(int *len, const char **fmt, t_list_pf **lst)
 {
 	(*fmt)++;
-	print_list((*lst));
+	print_list_pf((*lst));
 	*len += list_size((*lst));
 	delete_list(lst);
 }

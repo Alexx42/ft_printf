@@ -6,7 +6,7 @@
 /*   By: ale-goff <ale-goff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/06 14:17:40 by ale-goff          #+#    #+#             */
-/*   Updated: 2018/10/14 20:25:31 by ale-goff         ###   ########.fr       */
+/*   Updated: 2019/05/26 21:53:42 by ale-goff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	parse_zero(char **arr, t_flags **flags)
 		(*flags)->zeros += 1;
 }
 
-int		width(t_list **lst, t_flags *flags, char **arr, const char *fmt)
+int		width(t_list_pf **lst, t_flags *flags, char **arr, const char *fmt)
 {
 	int i[2];
 	int len;
@@ -47,7 +47,7 @@ int		width(t_list **lst, t_flags *flags, char **arr, const char *fmt)
 	return (flags->precision) > 0 ? precision_handle(lst, flags, arr) : len;
 }
 
-void	value_negative(char **arr, t_list **lst, t_flags **flags)
+void	value_negative(char **arr, t_list_pf **lst, t_flags **flags)
 {
 	int i;
 
@@ -82,7 +82,7 @@ void	value_zero(char **arr, t_flags **flags, const char *fmt)
 	}
 }
 
-int		precision_handle(t_list **lst, t_flags *flags, char **arr)
+int		precision_handle(t_list_pf **lst, t_flags *flags, char **arr)
 {
 	int i[2];
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   helpers.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ale-goff <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ale-goff <ale-goff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/09 23:47:45 by ale-goff          #+#    #+#             */
-/*   Updated: 2018/10/09 23:47:49 by ale-goff         ###   ########.fr       */
+/*   Updated: 2019/05/26 21:55:43 by ale-goff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int		ft_puthex(unsigned long n, char upper)
 	return (len);
 }
 
-char	*ft_itoa_base_signed(long long value, unsigned char base, char upper)
+char	*ft_itoa_b_pf_signed(long long value, unsigned char base, char upper)
 {
 	char		*s;
 	long long	n;
@@ -66,7 +66,7 @@ char	*ft_itoa_base_signed(long long value, unsigned char base, char upper)
 	return (s);
 }
 
-char	*ft_itoa_base(unsigned long long value, unsigned char base, char upper)
+char	*ft_itoa_b_pf(unsigned long long value, unsigned char base, char upper)
 {
 	char				*s;
 	unsigned long long	n;
